@@ -118,7 +118,7 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ![Resources](image-4.png)
 
-![Resources -- chef cards](image-5.png)
+![Resources -- chef cards](image-9.png)
 
 (![Resources -- emergency](image-8.png))
 
