@@ -120,7 +120,7 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ![Resources -- chef cards](image-5.png)
 
-![Resources -- emergency](image-6.png)
+(![Resources -- emergency](image-8.png))
 
 ![Resources -- spokin](image-7.png)
 
@@ -357,17 +357,18 @@ Thursday March 21 - Friday March 22
 
 Sprint 2
 Saturday March 23 - Monday March 25
-- Implement features for generating chef cards and accessing emergency phone numbers.
-- Build community forum functionality for posting and browsing user-generated content.
+- Implement back and front-end feature for accessing emergency phone numbers.
+- Build front and back-end community forum functionality for posting and browsing user-generated content.
 
 Sprint 3
 Tuesday March 26 - Thursday March 28
-- Develop comprehensive travel guide section with tips and resources for allergy-safe dining.
-- Integrate menu and label translation tips feature.
+- Develop comprehensive travel guide section with tips and resources for allergy-safe traveling.
+- Create About the Author section - write bio and import photos
+- Integrate use params into resources directory section for functionality of which resource is showing.
 
 Sprint 4
 Friday March 29 - Sunday March 31 
-- Finalize external resources directory and educational content sections.
+- Finalize front end design for optimal user experience.
 - Implement authentication functionality for user profiles (if time permits).
 
 Monday April 1 
