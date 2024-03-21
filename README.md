@@ -108,21 +108,21 @@ Resources Page
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-![Home Page](image.png)
+![Home Page](./proposal%20images/image.png)
 
-![Community Page](image-1.png)
+![Community Page](./proposal%20images/image-1.png)
 
-![About Page](image-2.png)
+![About Page](./proposal%20images/image-2.png)
 
-![Travel Guide](image-3.png)
+![Travel Guide](./proposal%20images/image-3.png)
 
-![Resources](image-4.png)
+![Resources](./proposal%20images/image-4.png)
 
-![Resources -- chef cards](image-9.png)
+![Resources -- chef cards](./proposal%20images/image-9.png)
 
-(![Resources -- emergency](image-8.png))
+(![Resources -- emergency](./proposal%20images/image-8.png))
 
-![Resources -- spokin](image-7.png)
+![Resources -- spokin](./proposal%20images/image-7.png)
 
 ### Data
 
