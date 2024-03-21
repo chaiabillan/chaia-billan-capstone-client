@@ -2,6 +2,7 @@ import './CommunityPage.scss';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CommentList from '../../Components/CommentList/CommentList';
+import PostCommentForm from '../../Components/PostCommentForm/PostCommentForm';
 
 function CommunityPage () {
 
@@ -26,6 +27,7 @@ function CommunityPage () {
     return (
         <>
             <p>this is the community page</p>
+            < PostCommentForm />
             < CommentList comments={comments}/>
         </>
     )
