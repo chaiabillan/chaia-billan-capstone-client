@@ -1,13 +1,13 @@
 import './CommentItem.scss'
+// import axios from 'axios';
 
 function CommentItem({comment, onDelete}) {
 
     const handleDelete = async () => {
         try {
-          await axios.delete(`http://localhost:8080/api/comments/${comment.id}`);
-          onDelete(comment.id); // Notify the parent component about the deletion
-        } catch (error) {
-          console.error(error);
+            onDelete(comment.comment_id); 
+        }  catch (error) {
+            console.error('Error deleting comment:', error);
         }
       };
 

@@ -37,6 +37,7 @@ function CommunityPage () {
 
     const handleDeleteComment = (updatedComments) => {
         setComments(updatedComments);
+        console.log(updatedComments);
     }
 
 
