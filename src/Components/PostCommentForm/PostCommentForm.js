@@ -3,14 +3,14 @@ import { useRef } from "react";
 import axios from 'axios';
 
 
-function PostCommentForm () {
+function PostCommentForm ({onNewComment}) {
 
     const formRef = useRef();
     const usernameRef = useRef();
     const commentTextRef = useRef();
     const baseURL = 'http://localhost:8080';
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const newCommentData = {
@@ -18,16 +18,17 @@ function PostCommentForm () {
             comment_text: commentTextRef.current.value
         }
 
-        const postNewComment = async () => {
+        // const postNewComment = async () => {
             try {
                 await axios.post(`${baseURL}/api/comments`,
                 newCommentData)
+                onNewComment(newCommentData)
             } catch(err) {
                 console.error(err);
             }
         }
-        postNewComment();
-    }
+        // postNewComment();
+    // }
 
     return (
         <form ref={formRef} onSubmit={handleSubmit}>
