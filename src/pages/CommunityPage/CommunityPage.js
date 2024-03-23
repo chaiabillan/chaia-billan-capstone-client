@@ -35,12 +35,16 @@ function CommunityPage () {
         }
     };
 
+    const handleDeleteComment = (updatedComments) => {
+        setComments(updatedComments);
+    }
+
 
     return (
         <>
             <p>this is the community page</p>
             < PostCommentForm onNewComment={handleNewComment}/>
-            < CommentList comments={comments}/>
+            < CommentList comments={comments} onDeleteComment={handleDeleteComment}/>
         </>
     )
 }
