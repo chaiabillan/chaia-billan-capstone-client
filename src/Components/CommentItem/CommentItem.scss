@@ -1,0 +1,108 @@
+.comment {
+    padding: 16px;
+    background-color: #EFEDED;
+    position: relative; /* Ensure relative positioning for the arrow */
+    // margin-bottom: 20px; /* Adjust as needed */
+
+
+    &__details {
+        display: flex;
+        padding-bottom: 6px;
+        align-items: center;
+
+        &--name {
+            padding-right: 16px;
+            margin: 0px;
+            color: #86B097;
+        }
+
+        &--time {
+            margin: 0px;
+            color: #86B097;
+            font-size: 11px;
+        }
+    }
+
+    &__text {
+        background-color: white;
+        padding: 12px;
+        font-size: 12px;
+        text-align: left;
+        border-radius: 8px;
+
+        &--content {
+            margin: 0px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px 0px 0px;
+
+        &--right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            &--replies {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-self: flex-end;
+            }
+
+            &--likes {
+                font-size: 14px;
+            }
+
+            &--reply {
+                margin-left: 10px;
+                border: none;
+            }
+
+            &--delete {
+                margin-left: 8px;
+                border: none;
+            }
+        }
+
+        &--left {
+            padding-left: 32px;
+
+           &--hide {
+            margin: 0px;
+            font-size: 12px;
+            color: #86B097;
+           }
+        }
+        
+    }
+}
+
+.replies {
+    padding-left: 32px;
+    // padding-top: 8px;
+
+    // &__indiv {
+        // padding-top: 9px;
+        // position: relative;
+
+    // }
+}
+
+.heart-image {
+    width: 30px; /* Adjust the width of the container */
+    height: 30px; /* Adjust the height of the container */
+    overflow: hidden; /* Hide the overflow outside the container */
+    border: none;
+    padding: 0px;
+  }
+  
+  .heart-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image to cover the container */
+  }
+  

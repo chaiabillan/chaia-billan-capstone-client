@@ -31,13 +31,21 @@ function PostCommentForm ({onNewComment}) {
     // }
 
     return (
-        <form ref={formRef} onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input ref={usernameRef} type='text' placeholder='Name' id='name'></input>
-            <label>Comment</label>
-            <input ref={commentTextRef} type='text' placeholder='Comment' id='comment'></input>
-            <button>Post</button>
-        </form>
+        <>
+            <section className='post-comment'>
+
+                <p className='post-comment__title'>Leave some advice, share experiences, or ask a question!</p>
+                <form className='form'ref={formRef} onSubmit={handleSubmit}>
+                    <label className='form__label'>Name:</label>
+                    <input className='form__input'ref={usernameRef} type='text' id='name'></input>
+                    <label className='form__label'>Comment:</label>
+                    <textarea className='form__input' ref={commentTextRef} type='text' id='comment'></textarea>
+                    <button className='form__button'>Post</button>
+                </form>
+            </section>
+
+        </>
+        
     )
 }
 
