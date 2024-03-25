@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid white;
+    padding-top: 16px;
+
+    &__label {
+        text-align: left;
+        color: white;
+        font-weight: 500;
+        padding-bottom: 8px;
+    }
+
+    &__input {
+        border-radius: 8px;
+        border: none;
+        padding: 8px;
+        margin-bottom: 8px;
+
+    }
+
+    &__button {
+        border-radius: 8px;
+        border: none;
+        padding: 8px;
+        margin-top: 8px;
+        background-color: white;
+        font-weight: 500;
+    }
+}

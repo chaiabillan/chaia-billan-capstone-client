@@ -38,10 +38,8 @@ function CommentItem({comment, onDelete}) {
             } else {
                 timeAgoString = 'just now';
             }
-
             setTimeAgo(timeAgoString);
         };
-
         calculateTimeAgo();
     }, [comment.timestamp]);
 
@@ -51,11 +49,10 @@ function CommentItem({comment, onDelete}) {
         }  catch (error) {
             console.error('Error deleting comment:', error);
         }
-      };
+    };
 
     return (
         <>
-
             <div className='comment'>
                     <div className='comment__details'>
                         <p className='comment__details--name'>{comment.username}</p>
@@ -70,14 +67,13 @@ function CommentItem({comment, onDelete}) {
                         </div>
                         <div className='comment__actions--right'>
                             <button className="heart-image">
-                                <img src={heart}/>
+                                <img src={heart} alt='heart'/>
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
                             <button className='comment__actions--right--reply'>Reply</button>
                             <button className='comment__actions--right--delete'onClick={handleDelete}>Delete</button> 
                         </div>
                     </div>
-                    
                 {/* Render replies if available */}
                 <div className='replies'>
                     {comment.replies && comment.replies.map(reply => (
@@ -85,7 +81,6 @@ function CommentItem({comment, onDelete}) {
                             <div className='comment__details'>
                                 <p className='comment__details--name'>{reply.username}</p>
                                 <p className='comment__details--time'>{timeAgo}</p>
-
                             </div>
                             <div className='comment__text'>
                                 <p className='comment__text--content'>{reply.reply_text}</p>
@@ -96,19 +91,15 @@ function CommentItem({comment, onDelete}) {
                                 </div>
                                 <div className='comment__actions--right'>
                                     <button className="heart-image">
-                                        <img src={heart} />
+                                        <img src={heart} alt='heart'/>
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
-
                                     <button className='comment__actions--right--delete' onClick={handleDelete}>Delete</button>
                                 </div>
                             </div>
-
-
                         </div>
                     ))}
                 </div>
-
                 </div>
         </>
     )

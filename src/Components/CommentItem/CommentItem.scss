@@ -1,7 +1,7 @@
 .comment {
-    padding: 16px;
-    background-color: #EFEDED;
-    position: relative; /* Ensure relative positioning for the arrow */
+    // padding: 16px;
+    // background-color: #EFEDED;
+    // position: relative; /* Ensure relative positioning for the arrow */
     // margin-bottom: 20px; /* Adjust as needed */
 
 
@@ -73,7 +73,7 @@
 
            &--hide {
             margin: 0px;
-            font-size: 12px;
+            font-size: 9px;
             color: #86B097;
            }
         }
@@ -94,7 +94,7 @@
 
 .heart-image {
     width: 30px; /* Adjust the width of the container */
-    height: 30px; /* Adjust the height of the container */
+    height: 26px; /* Adjust the height of the container */
     overflow: hidden; /* Hide the overflow outside the container */
     border: none;
     padding: 0px;

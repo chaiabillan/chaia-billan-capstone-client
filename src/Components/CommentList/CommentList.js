@@ -12,19 +12,19 @@ function CommentList({comments, onDeleteComment}) {
         onDeleteComment(updatedComments);
         console.log(updatedComments);
         // setComments(updatedComments);
-
-        
-      };
+    };
 
     return (
         <>
-            {comments.map(comment => (
-                <CommentItem 
-                    key={comment.id}
-                    comment={comment}
-                    onDelete={handleDeleteComment}
-                />
-            ))}
+            <section className='comments'>
+                {comments.map(comment => (
+                    <CommentItem
+                        key={comment.id}
+                        comment={comment}
+                        onDelete={handleDeleteComment}
+                    />
+                ))}
+            </section>
         </>
     )
 }

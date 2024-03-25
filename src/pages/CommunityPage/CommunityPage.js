@@ -10,41 +10,28 @@ function CommunityPage () {
     const baseURL = 'http://localhost:8080'
 
     useEffect(() => {
-        
         fetchComments();
     }, [])
 
     const fetchComments = async () => {
         try {
             const response = await axios.get(`${baseURL}/api/comments`)
-            // console.log(response.data);
             setComments(response.data);
         } catch (err) {
             console.log(err);
         }
-
     }
-
-    const handleNewComment = async (newCommentData) => {
-        try {
-            await axios.post(`${baseURL}/api/comments`, newCommentData);
-            // After posting, refetch comments to update the UI
-            fetchComments();
-        } catch (err) {
-            console.error(err);
-        }
-    };
 
     const handleDeleteComment = (updatedComments) => {
         setComments(updatedComments);
         console.log(updatedComments);
+        fetchComments();
     }
-
 
     return (
         <>
             <p>this is the community page</p>
-            < PostCommentForm onNewComment={handleNewComment}/>
+            < PostCommentForm  fetchComments={fetchComments}/>
             < CommentList comments={comments} onDeleteComment={handleDeleteComment}/>
         </>
     )
