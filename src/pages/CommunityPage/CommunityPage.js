@@ -32,7 +32,7 @@ function CommunityPage () {
         <>
             <p>this is the community page</p>
             < PostCommentForm  fetchComments={fetchComments}/>
-            < CommentList comments={comments} onDeleteComment={handleDeleteComment}/>
+            < CommentList comments={comments} onDeleteComment={handleDeleteComment} fetchComments={fetchComments}/>
         </>
     )
 }

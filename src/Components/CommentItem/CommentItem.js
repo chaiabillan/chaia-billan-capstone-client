@@ -1,11 +1,13 @@
 import './CommentItem.scss'
 import { useEffect, useState } from 'react';
 import heart from '../../409001-200.png';
+import ReplyForm from '../ReplyForm/ReplyForm';
+import axios from 'axios';
 
-// import axios from 'axios';
-
-function CommentItem({comment, onDelete}) {
+function CommentItem({comment, onDelete, fetchComments, commentId}) {
     const [timeAgo, setTimeAgo] = useState('');
+    const [showReplyForm, setShowReplyForm] = useState(false);
+    const [showReplies, setShowReplies] = useState(true);
 
     useEffect(() => {
         const calculateTimeAgo = () => {
@@ -43,6 +45,17 @@ function CommentItem({comment, onDelete}) {
         calculateTimeAgo();
     }, [comment.timestamp]);
 
+    // console.log(commentId);
+
+    const handleDeleteReply = async (replyId) => {
+        try {
+            await axios.delete(`http://localhost:8080/api/replies/${commentId}/${replyId}`);
+            fetchComments(); 
+        } catch (error) {
+            console.error('Error deleting reply:', error);
+        }
+    };
+
     const handleDelete = async () => {
         try {
             onDelete(comment.comment_id); 
@@ -50,6 +63,21 @@ function CommentItem({comment, onDelete}) {
             console.error('Error deleting comment:', error);
         }
     };
+
+    const handleToggleReplyForm = () => {
+        setShowReplyForm(!showReplyForm);
+    };
+
+    const handleToggleReplies = () => {
+        setShowReplies(!showReplies); // Toggle the visibility of replies
+    };
+
+    const handleReplyPosted = () => {
+        setShowReplyForm(false); // Hide the reply form once posted
+        fetchComments(); // Fetch comments to refresh the list
+    };
+
+
 
     return (
         <>
@@ -59,22 +87,30 @@ function CommentItem({comment, onDelete}) {
                         <p className='comment__details--time'>{timeAgo}</p>
                     </div>
                     <div className='comment__text'>
-                        <p className='comment__text--content'>{comment.comment_text}</p>
+                    <p className='comment__text--content'>{comment.comment_text}</p>
+                </div>
+                <div className='comment__actions'>
+                    <div className='comment__actions--left'>
+                        {comment.replies && comment.replies.length > 0 && (
+                            <button className='comment__actions--left--hide' onClick={handleToggleReplies}>
+                                {showReplies ? 'Hide Replies' : 'Show Replies'}
+                            </button>
+                        )}                        
                     </div>
-                    <div className='comment__actions'>
-                        <div className='comment__actions--left'>
-                            <p className='comment__actions--left--hide'>Hide Replies</p>
-                        </div>
-                        <div className='comment__actions--right'>
-                            <button className="heart-image">
-                                <img src={heart} alt='heart'/>
+                    <div className='comment__actions--right'>
+                        <button className="heart-image">
+                            <img src={heart} alt='heart'/>
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
-                            <button className='comment__actions--right--reply'>Reply</button>
+                            <button className='comment__actions--right--reply' onClick={handleToggleReplyForm}>Reply</button>
                             <button className='comment__actions--right--delete'onClick={handleDelete}>Delete</button> 
                         </div>
                     </div>
+
+                    {showReplyForm && <ReplyForm commentId={comment.comment_id} fetchComments={fetchComments} onReplyPosted={handleReplyPosted}/>}
+
                 {/* Render replies if available */}
+                {showReplies && (
                 <div className='replies'>
                     {comment.replies && comment.replies.map(reply => (
                         <div key={reply.reply_id} className='replies__indiv'>
@@ -94,12 +130,13 @@ function CommentItem({comment, onDelete}) {
                                         <img src={heart} alt='heart'/>
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
-                                    <button className='comment__actions--right--delete' onClick={handleDelete}>Delete</button>
+                                    <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button>
                                 </div>
                             </div>
                         </div>
                     ))}
-                </div>
+                </div>)}
+                
                 </div>
         </>
     )

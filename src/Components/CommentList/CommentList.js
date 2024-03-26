@@ -2,7 +2,7 @@ import './CommentList.scss'
 import CommentItem from '../CommentItem/CommentItem'
 import axios from "axios";
 
-function CommentList({comments, onDeleteComment}) {
+function CommentList({comments, onDeleteComment, fetchComments}) {
 
     const handleDeleteComment = async (commentId) => {
         // Filter out the deleted comment from the comments array
@@ -14,14 +14,18 @@ function CommentList({comments, onDeleteComment}) {
         // setComments(updatedComments);
     };
 
+    
+
     return (
         <>
             <section className='comments'>
                 {comments.map(comment => (
                     <CommentItem
-                        key={comment.id}
+                        key={comment.comment_id}
                         comment={comment}
+                        commentId={comment.comment_id}
                         onDelete={handleDeleteComment}
+                        fetchComments={fetchComments}
                     />
                 ))}
             </section>
