@@ -77,6 +77,24 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
         fetchComments(); // Fetch comments to refresh the list
     };
 
+    const handleCommentLike = async () => {
+        try {
+            await axios.put(`http://localhost:8080/api/comments/${commentId}`);
+            fetchComments(); 
+        } catch (error) {
+            console.error('Error liking comment:', error);
+        }
+    }
+
+    const handleReplyLike = async (replyId) => {
+        try {
+            await axios.put(`http://localhost:8080/api/replies/${commentId}/${replyId}`);
+            fetchComments(); 
+        } catch (error) {
+            console.error('Error liking comment:', error);
+        }
+    }
+
 
 
     return (
@@ -98,7 +116,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                         )}                        
                     </div>
                     <div className='comment__actions--right'>
-                        <button className="heart-image">
+                        <button className="heart-image" onClick={handleCommentLike}>
                             <img src={heart} alt='heart'/>
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
@@ -126,7 +144,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                                     <p className='comment__actions--left--hide'></p>
                                 </div>
                                 <div className='comment__actions--right'>
-                                    <button className="heart-image">
+                                    <button className="heart-image" onClick={() => handleReplyLike(reply.reply_id)}>
                                         <img src={heart} alt='heart'/>
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>

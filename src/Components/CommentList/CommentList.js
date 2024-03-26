@@ -10,8 +10,6 @@ function CommentList({comments, onDeleteComment, fetchComments}) {
 
         const updatedComments = comments.filter((comment) => comment.id !== commentId);
         onDeleteComment(updatedComments);
-        console.log(updatedComments);
-        // setComments(updatedComments);
     };
 
     

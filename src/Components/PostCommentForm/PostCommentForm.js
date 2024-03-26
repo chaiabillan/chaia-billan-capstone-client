@@ -21,7 +21,6 @@ function PostCommentForm({ fetchComments }) {
         try {
             await axios.post(`${baseURL}/api/comments`,
                 newCommentData)
-            console.log(newCommentData);
             fetchComments();
 
             usernameRef.current.value = '';

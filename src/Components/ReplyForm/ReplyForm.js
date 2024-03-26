@@ -17,12 +17,10 @@ function ReplyForm({commentId, fetchComments, onReplyPosted}) {
             username: usernameRef.current.value,
             replyText: replyTextRef.current.value
         }
-        console.log(newReplyData);
 
         try {
             await axios.post(`${baseURL}/api/replies`,
                 newReplyData)
-            console.log(newReplyData);
             fetchComments();
             onReplyPosted();
             usernameRef.current.value = '';
