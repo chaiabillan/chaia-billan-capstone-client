@@ -1,0 +1,32 @@
+.resources-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; 
+    white-space: nowrap;
+
+    &__item {
+        margin: 10px;
+        border: none;
+        min-width: 130px;
+        min-height: 120px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: #86B097;
+
+        &--link {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            display: inline-block; /* Ensure each link is displayed in a single line */
+
+        }
+    }
+}
+
+.selected {
+    background-color: #497059;
+}
