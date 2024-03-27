@@ -1,3 +1,88 @@
 select {
     width: 100px;
 }
+
+.ambulance-number {
+    background-color: #86B097;
+    padding: 16px;
+
+    &__back {
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 8px;
+        border: none;
+        padding: 3px 9px;
+        font-size: 12px;
+    }
+
+    &__title {
+        color: white;
+        text-align: left;
+    }
+
+    &__subtitle {
+        text-align: left;
+        color: white;
+        font-size: 13px;
+        margin: 24px 0px;
+    }
+}
+
+.get-number-form {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        text-align: left;
+        color: white;
+    }
+
+    &__dropdown {
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        margin: 10px 0px;
+        padding: 10px;
+        font-size: 15px;
+
+        &--options {
+            font-size: 20px ;
+        }
+        
+    }
+
+    &__submit {
+        width: 20%;
+        align-self: flex-end;
+        border-radius: 8px;
+        border: none;
+        padding: 3px;
+        font-size: 12px;
+    }
+}
+
+.information {
+    text-align: left;
+    color: white;
+
+    &__title {
+        font-size: 12px;
+    }
+
+    &__number {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__save {
+        font-size: 12px;
+    }
+
+    &__disclaimer {
+        font-size: 8px;
+    }
+}
+
+option {
+    font-size: 12px !important;
+}
