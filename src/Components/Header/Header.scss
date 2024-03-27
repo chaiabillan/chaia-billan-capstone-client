@@ -1,0 +1,18 @@
+.nav-bar {
+    display: flex;
+    background-color: #08849A;
+    color: white;
+    align-items: center;
+    height: 50px;
+
+    &__option {
+        width: 20%;
+        color: white;
+        text-decoration: none;
+
+        &--title {
+            font-weight: 700;
+            width: 25%;
+        }
+    }
+}
