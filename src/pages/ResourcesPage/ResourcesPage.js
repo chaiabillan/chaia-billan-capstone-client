@@ -30,9 +30,9 @@ function ResourcesPage() {
       </section>
       <section>
         <p>All the resources you need, all in one place!</p>
+        <p>Click on a card to see the info!</p>
       </section>
       <section className='resources'>
-        
         <ul className='resources-list'>
           <li className={`resources-list__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
             <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>

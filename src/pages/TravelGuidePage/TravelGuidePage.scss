@@ -1,1 +1,48 @@
+.hero {
+    &__title {
+        &--travel-guide {
+            left: 19px;
+            top: 115px;
+            color: #280e02;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+    }
+}
 
+.guide {
+    padding: 16px;
+
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--title {
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        &--arrow {
+            width: 10px;
+            height: 10px;
+
+            // &:focus & .guide__content--text {
+            //     display: flex;
+            // }
+        }
+    }
+
+    &__content {
+        text-align: left;
+        display: flex;
+
+        &--text {
+            font-size: 12px;
+        }
+    }
+}
+
+.selected-section .guide__content{
+    display: flex;
+}
