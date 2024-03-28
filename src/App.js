@@ -1,4 +1,5 @@
-import './App.css';
+import './App.scss';
+import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import CommunityPage from './pages/CommunityPage/CommunityPage';

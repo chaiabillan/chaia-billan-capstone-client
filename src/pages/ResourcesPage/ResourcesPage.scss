@@ -1,26 +1,58 @@
+.hero {
+
+    &__image {
+
+        &--resources {
+            object-position: center 74%;
+
+        }
+        // bottom: 10px;
+    }
+}
+
+.resources {
+    background-color: #86B097;
+}
+
 .resources-list {
     list-style: none;
     display: flex;
     align-items: center;
     overflow-x: auto; 
     white-space: nowrap;
+    margin: 0px;
 
     &__item {
+        // margin: 10px;
+        // border: none;
+        // min-width: 130px;
+        // min-height: 120px;
+        // padding: 16px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // text-decoration: none;
+        // background-color: #86B097;
         margin: 10px;
         border: none;
-        min-width: 130px;
-        min-height: 120px;
+        min-width: 112px;
+        min-height: 104px;
+        background-color: #eac29bf0;
         padding: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        background-color: #86B097;
+        color: white;
+        font-weight: 600;
+        font-size: 11px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        border-radius: 8px;
 
         &--link {
             text-decoration: none;
             color: white;
-            font-weight: 500;
+            font-weight: 600;
             display: inline-block; /* Ensure each link is displayed in a single line */
 
         }
@@ -28,5 +60,5 @@
 }
 
 .selected {
-    background-color: #497059;
+    background-color: #86B097;
 }

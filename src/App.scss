@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family: Palatino;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden; /* Ensure the clipped portion is hidden */
+    width: 100%;
+    height: 212px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    background-color: #08849A;
+
+    /* Add styles to the image */
+    &__image {
+      width: 320px;
+      height: auto;
+      object-fit: cover; /* Ensure the image covers the entire container */
+      object-position: center; /* Center the image within the container */
+      object-position: center 50%;
+      position: relative;
+      // bottom: 81px;
+    }
+
+    
+  }

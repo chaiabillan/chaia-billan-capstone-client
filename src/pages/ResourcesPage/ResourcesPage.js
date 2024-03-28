@@ -5,6 +5,7 @@ import AllergyCards from '../../Components/AllergyCards/AllergyCards';
 import AllergyFriendlyRestaurants from '../../Components/AllergyFriendlyRestaurants/AllergyFriendlyRestaurants';
 import './ResourcesPage.scss'
 import { useLocation } from 'react-router-dom';
+import resourcesHero from '../../assets/images/hero-resources.jpeg'
 
 
 function ResourcesPage() {
@@ -24,12 +25,33 @@ function ResourcesPage() {
 
   return (
     <>
-      <section>
-        <p>this is the resources page</p>
+      <section className='hero'>
+        <img className='hero__image hero__image--resources' src={resourcesHero}/>
       </section>
       <section>
-        <p>pick a resource!</p>
+        <p>All the resources you need, all in one place!</p>
+      </section>
+      <section className='resources'>
+        
         <ul className='resources-list'>
+          <li className={`resources-list__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
+          </li>
+          <li className={`resources-list__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('allergy-cards')}>Allergy Cards</Link>
+          </li>
+          <li className={`resources-list__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>Allergy-Friendly <br></br>Restaurants</Link>
+          </li>
+          <li className={`resources-list__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
+          </li>
+          <li className={`resources-list__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('allergy-cards')}>Allergy Cards</Link>
+          </li>
+          <li className={`resources-list__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
+            <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>Allergy-Friendly <br></br>Restaurants</Link>
+          </li>
           <li className={`resources-list__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
             <Link to="#" className='resources-list__item--link' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
           </li>

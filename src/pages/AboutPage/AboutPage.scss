@@ -1,0 +1,33 @@
+
+
+.description {
+    background-color: antiquewhite;
+    height: auto;
+    margin: 0px;
+    padding: 32px;
+
+    &__title {
+        margin: 0px;
+
+    }
+
+    &__bio {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: left;
+
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+        
+    }
+}
