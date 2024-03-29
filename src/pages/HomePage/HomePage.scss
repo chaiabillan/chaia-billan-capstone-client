@@ -19,11 +19,13 @@
   &__top {
     font-size: 15px;
     font-weight: 600;
+    text-shadow: 1px 1px 1px grey;
   }
 
   &__bottom {
     font-size: 12px;
     font-weight: 600;
+    text-shadow: 1px 1px 1px grey;
   }
 }
   
@@ -38,6 +40,7 @@
         color: white;
         font-weight: 600;
         margin: 0px;
+        text-shadow: 1px 1px 1px grey;
     }
   }
 

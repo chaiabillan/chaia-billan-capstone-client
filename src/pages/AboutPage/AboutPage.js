@@ -30,6 +30,7 @@ import gallery25 from '../../assets/images/gallery25.jpeg'
 import gallery26 from '../../assets/images/gallery26.jpeg'
 import gallery27 from '../../assets/images/gallery27.jpeg'
 import gallery28 from '../../assets/images/gallery28.jpeg'
+import hero from '../../assets/images/hero-about.jpeg'
 
 
 function AboutPage () {
@@ -37,7 +38,7 @@ function AboutPage () {
     return (
         <>
             <section className='hero'>
-                <img className='hero__image' src={bioImage3}/>
+                <img className='hero__image hero__image--about' src={hero}/>
             </section>
             <section className='description'>
                 <p className='description__title'>

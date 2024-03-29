@@ -1,4 +1,14 @@
+.hero {
 
+    &__image--about {
+        bottom: -12px;
+        height: 320px;
+    }
+
+    &__title {
+        text-shadow: 1px 1px 1px grey;
+    }
+}
 
 .description {
     background-color: antiquewhite;
@@ -25,9 +35,10 @@
     padding: 3px;
 
     &__image {
-        width: 100%;
+        width: 98%;
         height: 100%;
-        padding: 1%;
+        margin: 1%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         
     }
 }
