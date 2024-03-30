@@ -1,7 +1,8 @@
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
 
 .post-reply {
-    background-color: #cfa688;
+    background-color: $Sand;
     padding: 0px 10px 10px 10px;
     margin: 10px 0px;
 
@@ -38,7 +39,7 @@
         margin-bottom: 8px;
 
         &:focus {
-            border-color: #86B097;
+            border-color: $Green;
             outline: none;
         }
     }
@@ -50,6 +51,7 @@
         margin-top: 8px;
         background-color: white;
         font-weight: 500;
+        color: $Green;
     }
 
     @include tablet {
@@ -72,10 +74,29 @@
             width: 15%;
             align-self: flex-end;
             font-size: 20px;
-            color: #86B097;
             font-weight: 700;
             margin-top: 16px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    @include desktop {
+
+        &__label {
+            font-size: 30px;
+            text-shadow: $TextShadowGray;
+        }
+
+        &__input {
+            font-size: 25px;
+
+            &--comment {
+                padding-bottom: 60px;
+            }
+        }
+
+        &__button {
+            font-size: 25px;
         }
     }
 }

@@ -120,7 +120,17 @@
                 margin: 0px 16px;
             }
         }
+    }
 
+    @include desktop {
+        height: 70px;
 
+        &__option {
+            font-size: 25px;
+
+            &--title {
+                font-size: 32px;
+            }
+        }
     }
 }

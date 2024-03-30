@@ -8,21 +8,30 @@
 
     @include tablet {
 
-        &__title {
+        &__title--community {
             position: absolute;
             color: white;
             font-size: 40px;
             font-weight: 700;
-            top: 97px;
+            top: 86px;
             right: 85px;
-
-            &--community {
-                top: 86px;
-            }
         }
 
         &__image--community {
             bottom: 30px;
+        }
+    }
+
+    @include desktop {
+
+        &__title--community {
+            top: 124px;
+            right: 629px;
+            font-size: 55px;
+        }
+
+        &__image--community {
+            bottom: 116px;
         }
     }
 }

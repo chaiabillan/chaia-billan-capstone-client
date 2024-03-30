@@ -1,4 +1,5 @@
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
 
 select {
     width: 100px;
@@ -33,6 +34,18 @@ select {
         }
 
     }
+
+    @include desktop {
+        padding: 10px 120px 64px 120px;
+
+        &__title {
+            font-size: 38px;
+        }
+
+        &__subtitle {
+            font-size: 32px;
+        }
+    }
 }
 
 .get-number-form {
@@ -51,9 +64,14 @@ select {
         margin: 10px 0px;
         padding: 10px;
         font-size: 15px;
+        color: $Green;
 
         &--options {
             font-size: 15px;
+        }
+
+        &:focus {
+            outline: none;
         }
 
     }
@@ -65,6 +83,7 @@ select {
         border: none;
         padding: 3px;
         font-size: 12px;
+        color: $Green;
     }
 
     @include tablet {
@@ -74,10 +93,6 @@ select {
         }
 
         &__dropdown {
-
-            &:focus {
-                outline: none;
-            }
 
             &--options {
                 font-size: 25px;
@@ -89,6 +104,22 @@ select {
             background-color: white;
             color: #86B097;
             font-weight: 600;
+        }
+    }
+
+    @include desktop {
+
+        &__title {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        &__dropdown {
+            font-size: 25px;
+        }
+
+        &__submit {
+            font-size: 26px;
         }
     }
 }

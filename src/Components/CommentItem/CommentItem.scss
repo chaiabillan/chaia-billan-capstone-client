@@ -149,6 +149,56 @@
             }
         }
     }
+
+    @include desktop {
+
+        &__details {
+
+            &--name {
+                font-size: 30px;
+            }
+
+            &--time {
+                font-size: 27px;
+            }
+        }
+
+        &__text {
+
+            &--content {
+                font-size: 25px;
+            }
+        }
+
+        &__actions {
+
+            &--right {
+
+                &--reply {
+                    font-size: 25px;
+
+                }
+
+                &--likes {
+                    font-size: 25px;
+
+                }
+
+                &--delete {
+                    font-size: 25px;
+                }
+
+
+            }
+
+            &--left {
+
+                &--hide {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
 }
 
 .replies {
@@ -164,6 +214,10 @@
     @include tablet {
         padding-left: 100px;
     }
+
+    @include desktop {
+        padding-left: 150px;
+    }
 }
 
 .heart-image {
@@ -177,6 +231,11 @@
     @include tablet {
         width: 28px;
         height: 30px;
+    }
+
+    @include desktop {
+        width: 35px;
+        height: 35px;
     }
 }
   

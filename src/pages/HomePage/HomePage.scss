@@ -14,24 +14,34 @@
     color: white;
     font-size: 18px;
     font-weight: 600;
-    text-shadow: 1px 1px 1px grey;
+    text-shadow: 1px 1px 2px grey;
   }
 
   @include tablet {
-    // display: flex;
-    // justify-content: center;
     text-align: center;
 
     &__image--homepage {
       bottom: 130px;
     }
 
-    &__title {
+    &__title--homepage {
       font-size: 40px;
       width: 100%;
       top: 100px;
-      text-shadow: 1px 1px 2px gray;
+      text-shadow: 1px 1px 2px white;
 
+    }
+  }
+
+  @include desktop {
+
+    &__image--homepage {
+      bottom: 284px;
+    }
+
+    &__title--homepage {
+      top: 150px;
+      font-size: 55px;
     }
   }
 }
@@ -45,13 +55,13 @@
   &__top {
     font-size: 15px;
     font-weight: 600;
-    text-shadow: 1px 1px 1px gray;
+    // text-shadow: 1px 1px 1px gray;
   }
 
   &__bottom {
     font-size: 12px;
     font-weight: 600;
-    text-shadow: 1px 1px 1px gray;
+    // text-shadow: 1px 1px 1px gray;
   }
 
   &__logo {
@@ -88,6 +98,24 @@
       display: block;
     }
   }
+
+  @include desktop {
+    padding: 64px 120px;
+
+    &__top {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    &__bottom {
+      font-size: 30px;
+    }
+
+    &__logo {
+      height: 300px;
+      width: 300px;
+    }
+  }
 }
   
 
@@ -110,6 +138,14 @@
       &__title {
         font-size: 36px;
         padding-bottom: 16px;
+      }
+    }
+
+    @include desktop {
+      padding: 60px 120px;
+
+      &__title {
+        font-size: 50px;
       }
     }
   }
@@ -152,6 +188,19 @@
 
         &--text {
           font-size: 20px;
+        }
+      }
+    }
+
+    @include desktop {
+
+      &__item {
+        min-width: 300px;
+        min-height: 300px;
+        margin: 18px 30px 18px 0px;
+
+        &--text {
+          font-size: 32px;
         }
       }
     }

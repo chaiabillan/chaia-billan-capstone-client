@@ -17,6 +17,15 @@
             }
         }
     }
+
+    @include tablet {
+        &__image {
+
+            &--resources {
+                bottom: 188px;
+            }
+        }
+    }
 }
 
 .resources {
@@ -73,6 +82,13 @@
                 text-decoration: none;
                 color: white;
             }
+        }
+    }
+
+    @include tablet {
+
+        &__resources {
+            padding: 64px 120px;
         }
     }
 }

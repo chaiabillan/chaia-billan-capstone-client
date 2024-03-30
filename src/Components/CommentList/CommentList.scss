@@ -1,10 +1,15 @@
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
 
 .comments {
     padding: 16px;
-    background-color: #cfa688;
+    background-color: $Green;
 
     @include tablet {
         padding: 32px;
+    }
+
+    @include desktop {
+        padding: 40px 120px;
     }
 }

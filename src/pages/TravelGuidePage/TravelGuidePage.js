@@ -33,7 +33,8 @@ function TravelGuidePage() {
                 <div className='guide__dropdown'>
                     <p className='guide__dropdown--title'>Flights</p>
                     <Link to='#' onClick={() => handleSectionClick('flights')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
-                        <img className='guide__dropdown--arrow' src={arrow} />
+                        {/* <img className='guide__dropdown--arrow' src={arrow} /> */}
+                        <div className='guide__dropdown--arrow--new'></div>
                     </Link>
                 </div>
                 {showSection === 'flights' &&
@@ -46,11 +47,10 @@ function TravelGuidePage() {
                 <div className='guide__dropdown'>
                     <p className='guide__dropdown--title'>Eating at Restaurants</p>
                     <Link to='#' onClick={() => handleSectionClick('restaurant')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
-                        <img className='guide__dropdown--arrow' src={arrow} />
+                        <div className='guide__dropdown--arrow--new'></div>
                     </Link>
                 </div>
                 {showSection === 'restaurant' &&
-
                     <div className='guide__content'>
                         <p className='guide__content--text'>This is the info for staying safe while eating at restaurants.</p>
                     </div>
@@ -60,10 +60,9 @@ function TravelGuidePage() {
                 <div className='guide__dropdown'>
                     <p className='guide__dropdown--title'>Cooking</p>
                     <Link to='#' onClick={() => handleSectionClick('cooking')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
-                        <img className='guide__dropdown--arrow' src={arrow} />
+                        <div className='guide__dropdown--arrow--new'></div>
                     </Link>                </div>
                 {showSection === 'cooking' &&
-
                     <div className='guide__content'>
                         <p className='guide__content--text'>This is the info for cooking.</p>
                     </div>
@@ -73,10 +72,10 @@ function TravelGuidePage() {
                 <div className='guide__dropdown'>
                     <p className='guide__dropdown--title'>Emergencies</p>
                     <Link to='#' onClick={() => handleSectionClick('emergencies')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
-                        <img className='guide__dropdown--arrow' src={arrow} />
-                    </Link>                                </div>
+                        <div className='guide__dropdown--arrow--new'></div>
+                    </Link>                                
+                </div>
                 {showSection === 'emergencies' &&
-
                     <div className='guide__content'>
                         <p className='guide__content--text'>This is the info for emergencies.</p>
                     </div>

@@ -17,7 +17,7 @@ function HomePage () {
                 {/* introduction */}
                 <div className='introduction__text'>
                     <p className='introduction__top'>All the resources for traveling with allergies, all in one place.</p>
-                    <p className='introduction__bottom'> Traveling with food allergies can be scary.  That’s why we’ve created a website that has all the resources you need to achieve peace of mind during your travels. Check out our comprehensive guide and connect with fellow travelers to share experiences.</p>
+                    <p className='introduction__bottom'> Traveling with food allergies can be scary.  That’s why I’ve created a website that has all the resources you need to achieve peace of mind during your travels. Check out our comprehensive guide and connect with fellow travelers to share experiences.</p>
                 </div>
                 <img src={logo} className='introduction__logo'/>
             </section>

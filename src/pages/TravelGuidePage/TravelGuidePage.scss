@@ -34,6 +34,28 @@
             }
         }
     }
+
+    @include desktop {
+
+        &__image {
+
+            &--guide {
+                top: 65px;
+                height: 677px;
+
+            }
+        }
+
+        &__title {
+
+            &--travel-guide {
+                left: 370px;
+                top: 112px;
+                font-size: 56px;
+            
+            }
+        }
+    }
 }
 
 .guide {
@@ -54,8 +76,16 @@
         }
 
         &--arrow {
-            width: 10px;
-            height: 10px;
+
+            &--new {
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 7px solid white;
+                transform: rotate(180deg); /* Adjust rotation as needed */
+    
+            }
         }
     }
 
@@ -76,12 +106,56 @@
             &--title {
                 font-size: 25px;
             }
+
+            &--arrow {
+
+                &--new {
+                    width: 0;
+                    height: 0;
+                    border-left: 9px solid transparent;
+                    border-right: 9px solid transparent;
+                    border-bottom: 15px solid white;
+                    transform: rotate(180deg); /* Adjust rotation as needed */
+        
+                }
+            }
         }
 
         &__content {
 
             &--text {
                 font-size: 21px;
+            }
+        }
+    }
+
+    @include desktop {
+        padding: 64px 120px;
+
+        &__dropdown {
+
+            &--title {
+                font-size: 37px;
+            }
+
+            &--arrow {
+
+                &--new {
+                    width: 0;
+                    height: 0;
+                    border-left: 13px solid transparent;
+                    border-right: 13px solid transparent;
+                    border-bottom: 20px solid white;
+                    transform: rotate(180deg); /* Adjust rotation as needed */
+        
+                }
+            }
+        }
+
+        &__content {
+
+            &--text {
+                font-size: 25px;
             }
         }
     }

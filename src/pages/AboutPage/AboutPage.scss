@@ -17,16 +17,24 @@
             bottom: 8px;
         }
     }
+
+    @include desktop {
+
+        &__image--about {
+            bottom: -68px;
+            height: 602px;
+        }
+    }
 }
 
 .introduction {
 
-    &__top {
+    // &__top {
 
-        &--about {
-            // text-align: center;
-        }
-    }
+    //     &--about {
+    //         // text-align: center;
+    //     }
+    // }
 
     &__bottom {
 
@@ -55,6 +63,14 @@
 
         &__image {
             width: 48%;
+        }
+    }
+
+    @include desktop {
+        padding: 11px;
+
+        &__image {
+            width: 31%;
         }
     }
 }
