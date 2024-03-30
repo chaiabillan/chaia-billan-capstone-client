@@ -1,7 +1,7 @@
 import './AboutPage.scss'
 import bioImage from '../../assets/images/IMG_6295.jpeg'
 import bioImage2 from '../../assets/images/IMG_0350.jpeg'
-import bioImage3 from '../../assets/images/bio-hero.jpeg'
+import hero2 from '../../assets/images/bio-hero.jpeg'
 import gallery1 from '../../assets/images/IMG_0449.jpeg'
 import gallery2 from '../../assets/images/IMG_0458.jpeg'
 import gallery3 from '../../assets/images/IMG_0504.jpeg'
@@ -38,29 +38,32 @@ function AboutPage () {
     return (
         <>
             <section className='hero'>
-                <img className='hero__image hero__image--about' src={hero}/>
+                <img className='hero__image hero__image--about' src={hero2}/>
             </section>
-            <section className='description'>
-                <p className='description__title'>
-                    Hello! Welcome to SafeTravels Allergy Compass!
-                </p>
-                <p className='description__bio'>
-                    My name is Chaia, and I made this website because I LOVE to travel. I have a severe nut allergy,
-                    and about a year before my first big solo backpacking trip to Europe, I had my first major
-                    anaphylactic allergic reaction. Naturally, I started wondering how I would stay safe while traveling alone.
-                    I had SUCH a hard time finding resources online that would help me. In fact, the only helpful information
-                    I found was from asking friends and family. 
-                </p>
-                <p className='description__bio'>
-                    I decided to create this website and curate it to be something that would've helped me on my trip. The comprehensive 
-                    travel guide includes information and tips for each aspect of traveling, such as flight safety and how to eat 
-                    at restaurants whose wait staff speak a different language. My hope is that this website inspires those with 
-                    food allergies to feel more confident to go see the world! 
-                </p>
-                <p className='description__bio'>
-                    The gallery below shows some of the food I was able to eat (safely!) while traveling last year. My favourite food
-                    is pancakes, if you can't tell!
-                </p>
+            <section className='description introduction'>
+                <div className='introduction__text'>
+                    <p className='introduction__top introduction__top--about'>
+                        Hello! Welcome to My Allergy Compass!
+                    </p>
+                    <p className='introduction__bottom introduction__bottom--about'>
+                        My name is Chaia, and I made this website because I LOVE to travel. I have a severe nut allergy,
+                        and about a year before my first big solo backpacking trip to Europe, I had my first major
+                        anaphylactic allergic reaction. Naturally, I started wondering how I would stay safe while traveling alone.
+                        I had SUCH a hard time finding resources online that would help me. In fact, the only helpful information
+                        I found was from asking friends and family. 
+                    </p>
+                    <p className='introduction__bottom introduction__bottom--about'>
+                        I decided to create this website and curate it to be something that would've helped me on my trip. The comprehensive 
+                        travel guide includes information and tips for each aspect of traveling, such as flight safety and how to eat 
+                        at restaurants whose wait staff speak a different language. My hope is that this website inspires those with 
+                        food allergies to feel more confident to go see the world! 
+                    </p>
+                    <p className='introduction__bottom introduction__bottom--about'>
+                        The gallery below shows some of the food I was able to eat (safely!) while traveling last year. My favourite food
+                        is pancakes, if you can't tell!
+                    </p>
+                </div>
+
             </section>
             <section className='gallery'>
                 <img className='gallery__image' src={gallery1}/>

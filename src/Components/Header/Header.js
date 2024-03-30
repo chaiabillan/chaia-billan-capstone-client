@@ -45,7 +45,7 @@ function Header() {
                     Community
                 </Link>
                 <Link to='/' className='nav-bar__option nav-bar__option--title '>
-                    SafeTravels Allergy Compass
+                    My Allergy Compass
                 </Link>
                 <Link to='/resources' className='nav-bar__option'>
                     Resources

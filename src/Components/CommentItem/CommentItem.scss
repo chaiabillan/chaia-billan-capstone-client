@@ -1,9 +1,6 @@
-.comment {
-    // padding: 16px;
-    // background-color: #EFEDED;
-    // position: relative; /* Ensure relative positioning for the arrow */
-    // margin-bottom: 20px; /* Adjust as needed */
+@use '../../styles/partials/mixins' as *;
 
+.comment {
 
     &__details {
         display: flex;
@@ -13,12 +10,12 @@
         &--name {
             padding-right: 16px;
             margin: 0px;
-            color: #86B097;
+            color: white;
         }
 
         &--time {
             margin: 0px;
-            color: #86B097;
+            color: white;
             font-size: 11px;
         }
     }
@@ -29,9 +26,11 @@
         font-size: 12px;
         text-align: left;
         border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
         &--content {
             margin: 0px;
+            color: #86B097;
         }
     }
 
@@ -51,20 +50,32 @@
                 flex-direction: row;
                 align-items: center;
                 justify-self: flex-end;
+                font-size: 14px;
+                color: white;
+                background-color: transparent;
             }
 
             &--likes {
                 font-size: 14px;
+                color: white;
+                background-color: transparent;
+
             }
 
             &--reply {
                 margin-left: 10px;
                 border: none;
+                color: white;
+                background-color: transparent;
+
             }
 
             &--delete {
                 margin-left: 8px;
                 border: none;
+                color: white;
+                background-color: transparent;
+
             }
         }
 
@@ -74,12 +85,69 @@
            &--hide {
             margin: 0px;
             font-size: 12px;
-            color: #86B097;
+            color: white;
             border: none;
             padding: 0px;
+            background-color: transparent;
            }
         }
         
+    }
+
+    @include tablet {
+
+        &__details {
+
+            &--name {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            &--time {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        &__text {
+
+            &--content {
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+
+        &__actions {
+
+            &--right {
+
+                &--reply {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                &--delete {
+                    font-size: 20px;
+                    font-weight: 600;
+
+                }
+
+                &--likes {
+                    font-size: 20px;
+                    font-weight: 600;
+
+                }
+            }
+
+            &--left {
+                padding-left: 0px;
+
+                &--hide {
+                    font-size: 17px;
+
+                }
+            }
+        }
     }
 }
 
@@ -92,19 +160,30 @@
         // position: relative;
 
     // }
+
+    @include tablet {
+        padding-left: 100px;
+    }
 }
 
 .heart-image {
-    width: 30px; /* Adjust the width of the container */
-    height: 26px; /* Adjust the height of the container */
+    width: 21px; /* Adjust the width of the container */
+    height: 21px; /* Adjust the height of the container */
     overflow: hidden; /* Hide the overflow outside the container */
     border: none;
     padding: 0px;
-  }
+    background-color: transparent;
+
+    @include tablet {
+        width: 28px;
+        height: 30px;
+    }
+}
   
   .heart-image img {
     width: 100%; /* Ensure the image fills the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Crop the image to cover the container */
+    background-color: transparent;
   }
   

@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins' as *;
+
 .nav-bar {
     display: flex;
     background-color: #08849A;
@@ -88,5 +90,37 @@
     &__tablet {
         display: flex;
         justify-content: center;
+    }
+
+    @include tablet {
+        width: 100%;
+        text-align: center;
+        height: 60px;
+
+        &__dropdown {
+            display: none;
+        }
+
+        &__tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        &__option {
+            display: block;
+            width: 17%;
+            font-size: 15px;
+            font-weight: 600;
+
+            &--title {
+                width: 28%;
+                font-size: 21px;
+                margin: 0px 16px;
+            }
+        }
+
+
     }
 }

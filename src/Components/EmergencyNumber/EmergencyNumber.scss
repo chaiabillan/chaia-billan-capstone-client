@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins' as *;
+
 select {
     width: 100px;
 }
@@ -5,15 +7,6 @@ select {
 .ambulance-number {
     background-color: #86B097;
     padding: 16px;
-
-    &__back {
-        display: flex;
-        justify-content: flex-start;
-        border-radius: 8px;
-        border: none;
-        padding: 3px 9px;
-        font-size: 12px;
-    }
 
     &__title {
         color: white;
@@ -25,6 +18,20 @@ select {
         color: white;
         font-size: 13px;
         margin: 24px 0px;
+    }
+
+    @include tablet {
+        padding: 32px;
+
+        &__title {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        &__subtitle {
+            font-size: 26px;
+        }
+
     }
 }
 
@@ -46,9 +53,9 @@ select {
         font-size: 15px;
 
         &--options {
-            font-size: 20px ;
+            font-size: 15px;
         }
-        
+
     }
 
     &__submit {
@@ -58,6 +65,31 @@ select {
         border: none;
         padding: 3px;
         font-size: 12px;
+    }
+
+    @include tablet {
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__dropdown {
+
+            &:focus {
+                outline: none;
+            }
+
+            &--options {
+                font-size: 25px;
+            }
+        }
+
+        &__submit {
+            font-size: 20px;
+            background-color: white;
+            color: #86B097;
+            font-weight: 600;
+        }
     }
 }
 
@@ -80,6 +112,27 @@ select {
 
     &__disclaimer {
         font-size: 8px;
+    }
+
+    @include tablet {
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__number {
+            font-size: 40px;
+        }
+
+        &__save {
+            font-size: 26px;
+
+        }
+
+        &__disclaimer {
+            font-size: 10px;
+
+        }
     }
 }
 

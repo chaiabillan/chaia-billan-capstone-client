@@ -1,6 +1,7 @@
 import './CommentItem.scss'
 import { useEffect, useState } from 'react';
 import heart from '../../409001-200.png';
+import heart2 from '../../assets/images/2048px-Ei-heart.svg.png';
 import ReplyForm from '../ReplyForm/ReplyForm';
 import axios from 'axios';
 
@@ -117,7 +118,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                     </div>
                     <div className='comment__actions--right'>
                         <button className="heart-image" onClick={handleCommentLike}>
-                            <img src={heart} alt='heart'/>
+                            <img src={heart2} alt='heart'/>
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
                             <button className='comment__actions--right--reply' onClick={handleToggleReplyForm}>Reply</button>
@@ -145,7 +146,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                                 </div>
                                 <div className='comment__actions--right'>
                                     <button className="heart-image" onClick={() => handleReplyLike(reply.reply_id)}>
-                                        <img src={heart} alt='heart'/>
+                                        <img src={heart2} alt='heart'/>
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
                                     <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button>

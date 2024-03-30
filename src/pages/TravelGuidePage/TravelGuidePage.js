@@ -15,17 +15,19 @@ function TravelGuidePage() {
     return (
         <>
             <section className='hero'>
-                <img className='hero__image' src={hero} />
+                <img className='hero__image hero__image--guide' src={hero} />
                 <p className='hero__title hero__title--travel-guide'>Travel Guide</p>
             </section>
-            <section className='description'>
-                <p className='description__title'>
-                    This comprehensive travel guide provides tips and advice in regards to how to stay
-                    safe while traveling with food allergies.
-                </p>
-                <p className='description__bio'>
-                    You can find information on flights, eating at restaurants and more!
-                </p>
+            <section className='introduction'>
+                <div className='introduction__text'>
+                    <p className='introduction__top'>
+                        This comprehensive travel guide provides tips and advice in regards to how to stay
+                        safe while traveling with food allergies.
+                    </p>
+                    <p className='introduction__bottom'>
+                        You can find information on flights, eating at restaurants and more!
+                    </p>
+                </div>
             </section>
             <section className='flights guide'>
                 <div className='guide__dropdown'>

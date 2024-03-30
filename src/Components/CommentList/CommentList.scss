@@ -1,5 +1,10 @@
+@use '../../styles/partials/mixins' as *;
+
 .comments {
     padding: 16px;
-    background-color: #EFEDED;
+    background-color: #cfa688;
 
+    @include tablet {
+        padding: 32px;
+    }
 }

@@ -1,6 +1,28 @@
+@use '../../styles/partials/mixins' as *;
+
 .hero {
 
     &__image--community {
         bottom: -37px;
+    }
+
+    @include tablet {
+
+        &__title {
+            position: absolute;
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            top: 97px;
+            right: 85px;
+
+            &--community {
+                top: 86px;
+            }
+        }
+
+        &__image--community {
+            bottom: 30px;
+        }
     }
 }

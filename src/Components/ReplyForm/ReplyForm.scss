@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins' as *;
+
 .post-comment {
     background-color: #86B097;
     padding: 20px;
@@ -8,12 +10,20 @@
         font-weight: 650;
         color: white;
     }
+
+    @include tablet {
+        padding: 32px;
+
+        &__title {
+            font-size: 30px;
+        }
+    }
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid white;
+    // border-top: 1px solid white;
     padding-top: 16px;
 
     &__label {

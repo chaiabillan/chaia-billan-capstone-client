@@ -1,38 +1,47 @@
+@use '../../styles/partials/mixins' as *;
+
 .hero {
 
     &__image--about {
-        bottom: -12px;
-        height: 320px;
+        bottom: 93px;
+        height: 500px;
     }
 
-    &__title {
+    &__title--about {
         text-shadow: 1px 1px 1px grey;
     }
-}
 
-.description {
-    background-color: antiquewhite;
-    height: auto;
-    margin: 0px;
-    padding: 32px;
+    @include tablet {
 
-    &__title {
-        margin: 0px;
-
-    }
-
-    &__bio {
-        font-size: 12px;
-        line-height: 14px;
-        text-align: left;
-
+        &__image--about {
+            bottom: 8px;
+        }
     }
 }
+
+.introduction {
+
+    &__top {
+
+        &--about {
+            // text-align: center;
+        }
+    }
+
+    &__bottom {
+
+        &--about {
+            padding: 10px 0px;
+        }
+    }
+}
+
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     padding: 3px;
+    background-color: #86B097;
 
     &__image {
         width: 98%;
@@ -40,5 +49,12 @@
         margin: 1%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         
+    }
+
+    @include tablet {
+
+        &__image {
+            width: 48%;
+        }
     }
 }

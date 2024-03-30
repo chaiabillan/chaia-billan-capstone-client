@@ -33,11 +33,11 @@ function ReplyForm({commentId, fetchComments, onReplyPosted}) {
     return (
         <>
             <section className='post-reply'>
-                <form className='form' ref={formRef} onSubmit={handleSubmit}>
+                <form className='form form__reply' ref={formRef} onSubmit={handleSubmit}>
                     <label className='form__label'>Name:</label>
                     <input className='form__input' ref={usernameRef} type='text' id='name'></input>
                     <label className='form__label'>Reply:</label>
-                    <textarea className='form__input' ref={replyTextRef} type='text' id='comment'></textarea>
+                    <textarea className='form__input form__input--comment' ref={replyTextRef} type='text' id='comment'></textarea>
                     <button className='form__button'>Post</button>
                 </form>
             </section>

@@ -1,12 +1,21 @@
+@use '../../styles/partials/mixins' as *;
+
 .hero {
 
     &__image {
 
         &--resources {
-            object-position: center 74%;
-
+            bottom: 108px;
         }
-        // bottom: 10px;
+    }
+
+    @include tablet {
+        &__image {
+
+            &--resources {
+                bottom: 20px;
+            }
+        }
     }
 }
 
@@ -18,21 +27,11 @@
     list-style: none;
     display: flex;
     align-items: center;
-    overflow-x: auto; 
+    overflow-x: auto;
     white-space: nowrap;
     margin: 0px;
 
     &__item {
-        // margin: 10px;
-        // border: none;
-        // min-width: 130px;
-        // min-height: 120px;
-        // padding: 16px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // text-decoration: none;
-        // background-color: #86B097;
         margin: 10px;
         border: none;
         min-width: 112px;
@@ -46,15 +45,34 @@
         color: white;
         font-weight: 600;
         font-size: 11px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
 
         &--link {
             text-decoration: none;
             color: white;
             font-weight: 600;
-            display: inline-block; /* Ensure each link is displayed in a single line */
+            display: inline-block;
+            /* Ensure each link is displayed in a single line */
 
+        }
+    }
+}
+
+.spotlight {
+
+    &__resources {
+        padding: 32px;
+    }
+
+    &__item {
+
+        &--text {
+
+            &--resources {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 }

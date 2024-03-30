@@ -1,17 +1,47 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+
 .hero {
+
+    &__image--guide {
+        height: 223px;
+    }
+
     &__title {
         &--travel-guide {
-            left: 56px;
-            top: 17px;
+            left: 67px;
+            top: 32px;
             color: white;
-            font-size: 14px;
+            font-size: 21px;
             font-weight: bolder;
+            position: absolute;
+        }
+    }
+
+    @include tablet {
+        &__image {
+            &--guide {
+                top: 58px;
+                height: 415px;
+            }
+        }
+
+        &__title {
+            &--travel-guide {
+                left: -41px;
+                top: 72px;
+                font-size: 38px;
+            }
         }
     }
 }
 
 .guide {
     padding: 16px;
+    background-color: $Green;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 600;
 
     &__dropdown {
         display: flex;
@@ -26,10 +56,6 @@
         &--arrow {
             width: 10px;
             height: 10px;
-
-            // &:focus & .guide__content--text {
-            //     display: flex;
-            // }
         }
     }
 
@@ -39,6 +65,24 @@
 
         &--text {
             font-size: 12px;
+        }
+    }
+
+    @include tablet {
+        padding: 32px;
+
+        &__dropdown {
+
+            &--title {
+                font-size: 25px;
+            }
+        }
+
+        &__content {
+
+            &--text {
+                font-size: 21px;
+            }
         }
     }
 }
