@@ -3,6 +3,10 @@ import hero from '../../assets/images/hero-travel-guide.jpeg'
 import arrow from '../../assets/images/down-arrow.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import FlightInfo from '../../Components/FlightInfo/FlightInfo'
+import RestaurantInfo from '../../Components/RestaurantInfo/RestaurantInfo'
+import CookingInfo from '../../Components/CookingInfo/CookingInfo'
+import EmergencyInfo from '../../Components/EmergencyInfo/EmergencyInfo'
 
 
 function TravelGuidePage() {
@@ -31,16 +35,14 @@ function TravelGuidePage() {
             </section>
             <section className='flights guide'>
                 <div className='guide__dropdown'>
-                    <p className='guide__dropdown--title'>Flights</p>
+                    <p className='guide__dropdown--title'>Staying safe on flights</p>
                     <Link to='#' onClick={() => handleSectionClick('flights')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
                         {/* <img className='guide__dropdown--arrow' src={arrow} /> */}
                         <div className='guide__dropdown--arrow--new'></div>
                     </Link>
                 </div>
                 {showSection === 'flights' &&
-                    <div className='guide__content'>
-                        <p className='guide__content--text'>This is the info for staying safe on flights.</p>
-                    </div>
+                    <FlightInfo/>
                 }
             </section>
             <section className='restaurant guide'>
@@ -51,9 +53,7 @@ function TravelGuidePage() {
                     </Link>
                 </div>
                 {showSection === 'restaurant' &&
-                    <div className='guide__content'>
-                        <p className='guide__content--text'>This is the info for staying safe while eating at restaurants.</p>
-                    </div>
+                    <RestaurantInfo/>
                 }
             </section>
             <section className='flights guide'>
@@ -63,9 +63,7 @@ function TravelGuidePage() {
                         <div className='guide__dropdown--arrow--new'></div>
                     </Link>                </div>
                 {showSection === 'cooking' &&
-                    <div className='guide__content'>
-                        <p className='guide__content--text'>This is the info for cooking.</p>
-                    </div>
+                    <CookingInfo/>
                 }
             </section>
             <section className='emergencies guide'>
@@ -76,9 +74,7 @@ function TravelGuidePage() {
                     </Link>                                
                 </div>
                 {showSection === 'emergencies' &&
-                    <div className='guide__content'>
-                        <p className='guide__content--text'>This is the info for emergencies.</p>
-                    </div>
+                    <EmergencyInfo />
                 }
             </section>
         </>

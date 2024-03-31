@@ -19,6 +19,12 @@ function ResourcesPage() {
     const searchParams = new URLSearchParams(location.search);
     const selected = searchParams.get('selectedResource');
     setSelectedResource(selected);
+
+    if (selected === 'emergency-number') {
+      window.scrollTo(0, 2000);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location.search]);
 
 

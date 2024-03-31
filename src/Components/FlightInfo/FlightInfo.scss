@@ -1,0 +1,17 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+
+.information {
+
+    &__body {
+
+        &--header {
+            font-size: 17px;
+        }
+
+        &--content {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
