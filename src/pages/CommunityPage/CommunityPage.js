@@ -31,13 +31,16 @@ function CommunityPage () {
     return (
         <>
             <section className='hero'>
-                <img src={hero} className='hero__image hero__image--community'/>   
+                <img src={hero} alt='cheese plate' className='hero__image hero__image--community'/>   
                 <p className='hero__title hero__title--community'>Community</p>
             </section>
             <section className='introduction'>
                 <div className='introduction__text'>
-                    <p className='introduction__top'>This is the description for the community page</p>
-                    <p className='introduction__bottom'>further description</p>
+                    <p className='introduction__top'>This is a great place to connect with fellow travelers that suffer from food allergies</p>
+                    <p className='introduction__bottom'>
+                        Feel free to leave suggestions for the author of this site as well (e.g., resources to add to travel guide), as this site is a continuous work in progress and will be updated regularly.
+                        If you know of a helpful resource or tip, please share! Our mission is to keep as many people safe and worry-free as possible.
+                    </p>
                 </div>
             </section>
             < PostCommentForm  fetchComments={fetchComments}/>

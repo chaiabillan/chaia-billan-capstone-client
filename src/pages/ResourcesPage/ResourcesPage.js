@@ -5,19 +5,13 @@ import AllergyCards from '../../Components/AllergyCards/AllergyCards';
 import AllergyFriendlyRestaurants from '../../Components/AllergyFriendlyRestaurants/AllergyFriendlyRestaurants';
 import './ResourcesPage.scss'
 import { useLocation } from 'react-router-dom';
-import hero from '../../assets/images/hero-resources.jpeg'
-import hero2 from '../../assets/images/resources-allergy-card2.jpeg'
-import hero3 from '../../assets/images/IMG_3830.jpeg';
-import hero4 from '../../assets/images/resources2.jpeg'
+import hero from '../../assets/images/resources2.jpeg'
 import Yummly from '../../Components/Yummly/Yummly';
 
 
 function ResourcesPage() {
   const [selectedResource, setSelectedResource] = useState(null);
   const location = useLocation();
-  // const emergencyNumberRef = useRef(null);
-  // const allergyCardsRef = useRef(null);
-  // const allergyFriendlyRestaurantsRef = useRef(null);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -44,7 +38,7 @@ function ResourcesPage() {
   return (
     <>
       <section className='hero'>
-        <img className='hero__image hero__image--resources' src={hero4} />
+        <img className='hero__image hero__image--resources' src={hero} alt='picnic'/>
         <p className='hero__title--resources'>Resources</p>
       </section>
       <section className='introduction'>

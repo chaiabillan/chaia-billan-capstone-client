@@ -41,13 +41,18 @@
             }
 
             &--content {
-                font-size: 24px;
+                font-size: 26px;
+                line-height: 33px;
             }
         }
     }
 }
 
-.link {
+// .link {
+//     color: white;
+//     // text-decoration: ;
+// }
+
+a {
     color: white;
-    // text-decoration: ;
 }

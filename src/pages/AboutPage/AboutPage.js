@@ -1,13 +1,10 @@
 import './AboutPage.scss'
-import bioImage from '../../assets/images/IMG_6295.jpeg'
-import bioImage2 from '../../assets/images/IMG_0350.jpeg'
-import hero2 from '../../assets/images/bio-hero.jpeg'
+import hero from '../../assets/images/bio-hero.jpeg'
 import gallery1 from '../../assets/images/IMG_0449.jpeg'
 import gallery2 from '../../assets/images/IMG_0458.jpeg'
 import gallery3 from '../../assets/images/IMG_0504.jpeg'
 import gallery4 from '../../assets/images/IMG_1163.jpeg'
 import gallery5 from '../../assets/images/IMG_3830.jpeg'
-import gallery6 from '../../assets/images/IMG_3999.jpeg'
 import gallery7 from '../../assets/images/IMG_4582.jpeg'
 import gallery8 from '../../assets/images/IMG_4623.jpeg'
 import gallery9 from '../../assets/images/IMG_4692.jpeg'
@@ -30,7 +27,6 @@ import gallery25 from '../../assets/images/gallery25.jpeg'
 import gallery26 from '../../assets/images/gallery26.jpeg'
 import gallery27 from '../../assets/images/gallery27.jpeg'
 import gallery28 from '../../assets/images/gallery28.jpeg'
-import hero from '../../assets/images/hero-about.jpeg'
 import { Link } from 'react-router-dom'
 
 
@@ -39,7 +35,7 @@ function AboutPage () {
     return (
         <>
             <section className='hero'>
-                <img className='hero__image hero__image--about' src={hero2}/>
+                <img className='hero__image hero__image--about' src={hero} alt='chaia'/>
             </section>
             <section className='description introduction'>
                 <div className='introduction__text'>
@@ -47,54 +43,52 @@ function AboutPage () {
                         Hello! Welcome to My Allergy Compass!
                     </p>
                     <p className='introduction__bottom introduction__bottom--about'>
-                        My name is Chaia, and I made this website because I love to travel. I have a severe nut allergy,
-                        and about a year before my first big solo backpacking trip to Europe, I had my first major
-                        anaphylactic allergic reaction. Naturally, I started wondering how I would stay safe while traveling alone.
+                        My name is Chaia, and I made this website because I love to travel. Before embarking on my first solo backpacking 
+                        trip to Europe, I experienced a major anaphylactic allergic reaction to peanuts. Naturally, I started wondering how 
+                        I would stay safe while traveling alone.
                         I had SUCH a hard time finding resources online that would help me. In fact, the only helpful information
                         I found was from asking friends and family. 
                     </p>
                     <p className='introduction__bottom introduction__bottom--about'>
-                        I decided to create this website and curate it to be something that would've helped me on my trip. The <Link to ='/travel-guide' className='link'>comprehensive 
-                        travel guide</Link> includes information and tips for each aspect of traveling, such as flight safety and how to eat 
-                        at restaurants whose wait staff speak a different language. My hope is that this website inspires those with 
-                        food allergies to feel more confident to go see the world! 
+                        Driven by my own struggles, I crafted this platform to fill the void I encountered.  
+                        The <Link to ='/travel-guide' className='link'>comprehensive travel guide</Link> covers every facet of traveling, from flight safety 
+                        to navigating language barriers at restaurants. My aim is to empower fellow allergy sufferers to explore the world with confidence.
                     </p>
                     <p className='introduction__bottom introduction__bottom--about'>
-                        The gallery below shows some of the food I was able to eat (safely!) while traveling last year. My favourite food
-                        is pancakes, if you can't tell!
+                    Below, you'll find a gallery showcasing some of the dishes I was lucky enough to try during my travels last year — all safely enjoyed, of course!
+                     And if you're wondering, yes, pancakes are my absolute favorite!
                     </p>
                 </div>
 
             </section>
             <section className='gallery'>
-                <img className='gallery__image' src={gallery1}/>
-                <img className='gallery__image' src={gallery2}/>
-                <img className='gallery__image' src={gallery3}/>
-                <img className='gallery__image' src={gallery4}/>
-                <img className='gallery__image' src={gallery5}/>
-                <img className='gallery__image' src={gallery7}/>
-                <img className='gallery__image' src={gallery8}/>
-                <img className='gallery__image' src={gallery9}/>
-                <img className='gallery__image' src={gallery10}/>
-                <img className='gallery__image' src={gallery11}/>
-                <img className='gallery__image' src={gallery12}/>
-                <img className='gallery__image' src={gallery13}/>
-                <img className='gallery__image' src={gallery14}/>
-                <img className='gallery__image' src={gallery15}/>
-                <img className='gallery__image' src={gallery16}/>
-                <img className='gallery__image' src={gallery17}/>
-                <img className='gallery__image' src={gallery18}/>
-                <img className='gallery__image' src={gallery19}/>
-                <img className='gallery__image' src={gallery20}/>
-                <img className='gallery__image' src={gallery21}/>
-                <img className='gallery__image' src={gallery22}/>
-                <img className='gallery__image' src={gallery23}/>
-                <img className='gallery__image' src={gallery24}/>
-                <img className='gallery__image' src={gallery25}/>
-                <img className='gallery__image' src={gallery26}/>
-                <img className='gallery__image' src={gallery27}/>
-                <img className='gallery__image' src={gallery28}/>
-
+                <img className='gallery__image' src={gallery1} alt='bao buns'/>
+                <img className='gallery__image' src={gallery2} alt='pancakes'/>
+                <img className='gallery__image' src={gallery3} alt='stroop waffles'/>
+                <img className='gallery__image' src={gallery4} alt='pasta'/>
+                <img className='gallery__image' src={gallery5} alt='pancakes'/>
+                <img className='gallery__image' src={gallery7} alt='chocolate covered strawberries'/>
+                <img className='gallery__image' src={gallery8} alt='shakshouka'/>
+                <img className='gallery__image' src={gallery9} alt='mocha'/>
+                <img className='gallery__image' src={gallery10} alt='vegetables'/>
+                <img className='gallery__image' src={gallery11} alt='belgian waffle'/>
+                <img className='gallery__image' src={gallery12} alt='apple pie'/>
+                <img className='gallery__image' src={gallery13} alt='tiramisu'/>
+                <img className='gallery__image' src={gallery14} alt='pasta'/>
+                <img className='gallery__image' src={gallery15} alt='key lime pie'/>
+                <img className='gallery__image' src={gallery16} alt='chicken tacos'/>
+                <img className='gallery__image' src={gallery17} alt='chocolate cake'/>
+                <img className='gallery__image' src={gallery18} alt='patatas bravas'/>
+                <img className='gallery__image' src={gallery19} alt='salmon benedict'/>
+                <img className='gallery__image' src={gallery20} alt='pizza'/>
+                <img className='gallery__image' src={gallery21} alt='chicken strips'/>
+                <img className='gallery__image' src={gallery22} alt='matcha pancakes'/>
+                <img className='gallery__image' src={gallery23} alt='chocolate covered fruit'/>
+                <img className='gallery__image' src={gallery24} alt='salad'/>
+                <img className='gallery__image' src={gallery25} alt='pastel de nata'/>
+                <img className='gallery__image' src={gallery26} alt='steak'/>
+                <img className='gallery__image' src={gallery27} alt='straberries and burrata'/>
+                <img className='gallery__image' src={gallery28} alt='dessert trio'/>
             </section>
         </>
     )

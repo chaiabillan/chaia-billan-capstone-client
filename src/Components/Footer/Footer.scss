@@ -1,0 +1,15 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer {
+    height: auto;
+    background-color: $Blue;
+
+    @include tablet {
+        height: auto;
+    }
+
+    @include desktop {
+        height: auto;
+    }
+}

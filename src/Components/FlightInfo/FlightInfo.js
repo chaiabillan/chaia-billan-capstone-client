@@ -9,29 +9,29 @@ function FlightInfo() {
                         Airline Accomodations   
                     </p>
                     <p className='information__body--content'>
-                        I highly reccomend calling the airline a few weeks before your flight to ask about
-                        the accomodations that they offer to passengers with allergies. More often than
-                        not, if you have submitted the necessary form, the airline will give you priority boarding
-                        so that you have time to wipe down your seats and tray table to clean off possible contamination
-                        of allergens. Here is the link for the WestJet form that you can submit a few weeks before
-                        your flight to apply for accomodation: link.
+                        For a worry-free flight experience, I strongly advise reaching out to your airline a few weeks prior to your departure. 
+                        Inquire about the accommodations they provide for passengers with allergies. In many cases, after completing the requisite form, 
+                        airlines offer priority boarding. This grants you the time needed to meticulously sanitize your seat and tray table, minimizing
+                        the risk of allergen exposure. For example, here is the link to the WestJet form which you can submit several weeks
+                        ahead of your flight to request accommodations: <a href='https://www.westjet.com/en-ca/special-needs/allergies' className='link'>Link</a>.
                     </p>
                     <p className='information__body--header'>
                         Well Too Wipes
                     </p>
                     <p className='information__body--content'>
-                        Well Too Wipes are a type of disinfectant wipe that denatures peanut proteins. 
-                        This would be a great thing to have on a flight to ensure there is no residual peanut 
-                        particles on the tray tables or seats. 
+                        Well Too Wipes offer a practical solution for individuals traveling with allergies, particularly those sensitive to peanuts. These 
+                        wipes are specifically designed to disinfect surfaces by denaturing peanut proteins effectively. This feature makes them invaluable 
+                        for travelers concerned about allergen exposure on tray tables and seats during flights. By using Well Too Wipes, travelers can take 
+                        proactive measures to minimize the risk of encountering residual peanut particles, providing peace of mind and a safer environment for 
+                        those with allergies.
                     </p>
                     <p className='information__body--header'>
                         Airplane Food
                     </p>
                     <p className='information__body--content'>
-                        I do not recommend eating the food provided on airplanes. There is just no way to guarantee
-                        that its safe to eat. It's not worth the chance of having an anaphylactic allergic reaction 
-                        on the plane, because of course it would be impossible to get to a hospital on time. 
-                        Instead, pack safe foods that you eat regularly. 
+                        When it comes to airplane food, it's best to play it safe. I don't recommend eating the meals served onboard. There's just no guarantee
+                         they're allergy-friendly. It's not worth risking a mid-flight allergic reaction when getting help quickly isn't easy. Instead, pack your 
+                         own snacks that you know are safe to munch on. 
                     </p>
                 </div>
             </section>

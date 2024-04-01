@@ -12,12 +12,20 @@ function CommentList({comments, onDeleteComment, fetchComments}) {
         onDeleteComment(updatedComments);
     };
 
+        // Function to compare timestamps and sort comments by date
+        const compareTimestamps = (a, b) => {
+            const timestampA = new Date(a.timestamp);
+            const timestampB = new Date(b.timestamp);
+            return timestampB - timestampA; // Sort in descending order (newest first)
+        };
     
+        // Sort comments by date
+        const sortedComments = [...comments].sort(compareTimestamps);
 
     return (
         <>
             <section className='comments'>
-                {comments.map(comment => (
+                {sortedComments.map(comment => (
                     <CommentItem
                         key={comment.comment_id}
                         comment={comment}

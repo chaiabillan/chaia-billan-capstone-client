@@ -1,6 +1,5 @@
 import './TravelGuidePage.scss'
 import hero from '../../assets/images/hero-travel-guide.jpeg'
-import arrow from '../../assets/images/down-arrow.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FlightInfo from '../../Components/FlightInfo/FlightInfo'
@@ -19,17 +18,18 @@ function TravelGuidePage() {
     return (
         <>
             <section className='hero'>
-                <img className='hero__image hero__image--guide' src={hero} />
+                <img className='hero__image hero__image--guide' src={hero} alt='bakery'/>
                 <p className='hero__title hero__title--travel-guide'>Travel Guide</p>
             </section>
             <section className='introduction'>
                 <div className='introduction__text'>
                     <p className='introduction__top'>
-                        This comprehensive travel guide provides tips and advice in regards to how to stay
-                        safe while traveling with food allergies.
+                        Dive into our comprehensive travel guide, carefully crafted to equip you with tips and advice for navigating the world with food allergies safely.
                     </p>
                     <p className='introduction__bottom'>
-                        You can find information on flights, eating at restaurants and more!
+                        Embark on your journey with confidence as we provide detailed insights on various aspects of travel, including securing 
+                        safe accommodations on flights, navigating dining options at restaurants, and much more. Whether you're soaring through 
+                        the skies or exploring local eateries, our guide ensures you're well-prepared to enjoy your travels while prioritizing your health and safety.
                     </p>
                 </div>
             </section>

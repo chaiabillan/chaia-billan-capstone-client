@@ -8,6 +8,7 @@ import TravelGuidePage from './pages/TravelGuidePage/TravelGuidePage';
 import ResourcesPage from './pages/ResourcesPage/ResourcesPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ScrollToTopOnMount from './Components/ScrollToTopOnMount/ScrollToTopOnMount';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/resources' element={<ResourcesPage/>}/>
             <Route path='/about' element={<AboutPage/>}/>
           </Routes>
+          <Footer />
           < ScrollToTopOnMount />
         </BrowserRouter>
 
