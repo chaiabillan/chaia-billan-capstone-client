@@ -7,11 +7,47 @@
 
         &--header {
             font-size: 17px;
+            margin-bottom: 0px;
         }
 
         &--content {
             font-size: 16px;
             font-weight: 500;
+            margin-top: 5px;
         }
     }
+
+    @include tablet {
+
+        &__body {
+
+            &--header {
+                font-size: 21px;
+            }
+
+            &--content {
+                font-size: 20px;
+            }
+
+        }
+    }
+
+    @include desktop {
+
+        &__body {
+
+            &--header {
+                font-size: 25px;
+            }
+
+            &--content {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.link {
+    color: white;
+    // text-decoration: ;
 }

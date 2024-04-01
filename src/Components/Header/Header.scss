@@ -87,6 +87,11 @@
         }
     }
 
+    &__option.navigate {
+        text-decoration: underline;
+    }
+
+
     &__tablet {
         display: flex;
         justify-content: center;

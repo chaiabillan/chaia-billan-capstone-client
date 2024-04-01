@@ -1,11 +1,12 @@
 import './Header.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import dropdownMenu from '../../assets/images/menu-list-dropdown.svg'
 import dropdown2 from '../../assets/images/dropdown2.jpeg'
 import { useState } from 'react'
 
 function Header() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const location = useLocation();
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -38,19 +39,19 @@ function Header() {
                 </div>
             </div>
             <div className='nav-bar__tablet'>
-                <Link to='/travel-guide' className='nav-bar__option'>
+                <Link to='/travel-guide' className={`nav-bar__option ${location.pathname === '/travel-guide' ? 'navigate' : ''}`}>
                     Travel Guide
                 </Link>
-                <Link to='/community' className='nav-bar__option'>
+                <Link to='/community' className={`nav-bar__option ${location.pathname === '/community' ? 'navigate' : ''}`}>
                     Community
                 </Link>
-                <Link to='/' className='nav-bar__option nav-bar__option--title '>
+                <Link to='/' className={`nav-bar__option nav-bar__option--title ${location.pathname === '/' ? 'navigate' : ''}`}>
                     My Allergy Compass
                 </Link>
-                <Link to='/resources' className='nav-bar__option'>
+                <Link to='/resources' className={`nav-bar__option ${location.pathname === '/resources' ? 'navigate' : ''}`}>
                     Resources
                 </Link>
-                <Link to='/about' className='nav-bar__option'>
+                <Link to='/about' className={`nav-bar__option ${location.pathname === '/about' ? 'navigate' : ''}`}>
                     About
                 </Link>
             </div>

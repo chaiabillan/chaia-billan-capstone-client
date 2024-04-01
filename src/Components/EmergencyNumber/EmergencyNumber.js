@@ -26,6 +26,9 @@ function EmergencyNumber() {
       try {
         const response = await axios.get(`http://localhost:8080/api/emergency-number/${selectedCountry}`);
             setAmbulancePhone(response.data.ambulance_phone);
+            setTimeout(() => {
+                window.scrollTo(0, document.body.scrollHeight);
+              }, 50)
         } catch (error) {
             console.error('Error fetching ambulance phone number:', error);
         }

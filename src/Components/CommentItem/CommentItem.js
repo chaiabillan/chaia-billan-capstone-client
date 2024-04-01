@@ -10,9 +10,10 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
     const [showReplyForm, setShowReplyForm] = useState(false);
     const [showReplies, setShowReplies] = useState(true);
 
-    useEffect(() => {
-        const calculateTimeAgo = () => {
-            const timestamp = new Date(comment.timestamp);
+    // useEffect(() => {
+        const calculateTimeAgo = (timestamp) => { // added timestamp
+            // const timestamp = new Date(comment.timestamp);
+            
             const now = new Date();
             const diff = Math.abs(now - timestamp);
             const seconds = Math.floor(diff / 1000);
@@ -41,10 +42,11 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
             } else {
                 timeAgoString = 'just now';
             }
-            setTimeAgo(timeAgoString);
+            // setTimeAgo(timeAgoString);
+            return timeAgoString
         };
-        calculateTimeAgo();
-    }, [comment.timestamp]);
+        // calculateTimeAgo();
+    // }, [comment.timestamp, comment.replies]);
 
     // console.log(commentId);
 
@@ -103,7 +105,10 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
             <div className='comment'>
                     <div className='comment__details'>
                         <p className='comment__details--name'>{comment.username}</p>
-                        <p className='comment__details--time'>{timeAgo}</p>
+                        {/* <p className='comment__details--time'>{timeAgo}</p>
+                         */}
+                        <p className='comment__details--time'>{calculateTimeAgo(new Date(comment.timestamp))}</p>
+
                     </div>
                     <div className='comment__text'>
                     <p className='comment__text--content'>{comment.comment_text}</p>
@@ -135,7 +140,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                         <div key={reply.reply_id} className='replies__indiv'>
                             <div className='comment__details'>
                                 <p className='comment__details--name'>{reply.username}</p>
-                                <p className='comment__details--time'>{timeAgo}</p>
+                                <p className='comment__details--time'>{calculateTimeAgo(new Date(reply.timestamp))}</p>
                             </div>
                             <div className='comment__text'>
                                 <p className='comment__text--content'>{reply.reply_text}</p>

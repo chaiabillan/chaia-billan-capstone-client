@@ -1,19 +1,17 @@
-import './AllergyFriendlyRestaurants.scss'
-
-function AllergyFriendlyRestaurants() {
+function Yummly() {
 
     return (
         <section className='resource'>
             <p className='resource__title'>
-                Spokin
+                Yummly
             </p>
             <div className='resource__description'>
                 <p className='resource__description--content'>
-                    Spokin is a website that..
+                    Yummly is a website that..
                 </p>
             </div>
         </section>
     )
 }
 
-export default AllergyFriendlyRestaurants
+export default Yummly

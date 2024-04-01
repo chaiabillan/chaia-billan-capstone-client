@@ -20,9 +20,18 @@ function FlightInfo() {
                         Well Too Wipes
                     </p>
                     <p className='information__body--content'>
-                        Well Too Wipes are a type of disinfectant wipe that denature peanut proteins. 
+                        Well Too Wipes are a type of disinfectant wipe that denatures peanut proteins. 
                         This would be a great thing to have on a flight to ensure there is no residual peanut 
                         particles on the tray tables or seats. 
+                    </p>
+                    <p className='information__body--header'>
+                        Airplane Food
+                    </p>
+                    <p className='information__body--content'>
+                        I do not recommend eating the food provided on airplanes. There is just no way to guarantee
+                        that its safe to eat. It's not worth the chance of having an anaphylactic allergic reaction 
+                        on the plane, because of course it would be impossible to get to a hospital on time. 
+                        Instead, pack safe foods that you eat regularly. 
                     </p>
                 </div>
             </section>

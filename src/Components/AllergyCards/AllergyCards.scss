@@ -1,0 +1,39 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.resource {
+    background-color: $Green;
+    color: white;
+    padding: 0px 16px 16px 16px;
+
+    &__title {
+        margin: 0px;
+        font-weight: 600;
+    }
+
+    &__description {
+        text-align: left;
+    }
+
+    @include tablet {
+
+        &__title {
+            font-size: 25px;
+        }
+
+        &__description {
+            font-size: 20px;
+        }
+    }
+
+    @include desktop {
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__description {
+            font-size: 35px;
+        }
+    }
+}

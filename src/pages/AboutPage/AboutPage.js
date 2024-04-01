@@ -31,6 +31,7 @@ import gallery26 from '../../assets/images/gallery26.jpeg'
 import gallery27 from '../../assets/images/gallery27.jpeg'
 import gallery28 from '../../assets/images/gallery28.jpeg'
 import hero from '../../assets/images/hero-about.jpeg'
+import { Link } from 'react-router-dom'
 
 
 function AboutPage () {
@@ -46,15 +47,15 @@ function AboutPage () {
                         Hello! Welcome to My Allergy Compass!
                     </p>
                     <p className='introduction__bottom introduction__bottom--about'>
-                        My name is Chaia, and I made this website because I LOVE to travel. I have a severe nut allergy,
+                        My name is Chaia, and I made this website because I love to travel. I have a severe nut allergy,
                         and about a year before my first big solo backpacking trip to Europe, I had my first major
                         anaphylactic allergic reaction. Naturally, I started wondering how I would stay safe while traveling alone.
                         I had SUCH a hard time finding resources online that would help me. In fact, the only helpful information
                         I found was from asking friends and family. 
                     </p>
                     <p className='introduction__bottom introduction__bottom--about'>
-                        I decided to create this website and curate it to be something that would've helped me on my trip. The comprehensive 
-                        travel guide includes information and tips for each aspect of traveling, such as flight safety and how to eat 
+                        I decided to create this website and curate it to be something that would've helped me on my trip. The <Link to ='/travel-guide' className='link'>comprehensive 
+                        travel guide</Link> includes information and tips for each aspect of traveling, such as flight safety and how to eat 
                         at restaurants whose wait staff speak a different language. My hope is that this website inspires those with 
                         food allergies to feel more confident to go see the world! 
                     </p>

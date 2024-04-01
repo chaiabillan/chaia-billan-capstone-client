@@ -7,11 +7,12 @@ select {
 
 .ambulance-number {
     background-color: #86B097;
-    padding: 16px;
+    padding: 0px 16px 16px 16px;
 
     &__title {
         color: white;
         text-align: left;
+        margin: 0px;
     }
 
     &__subtitle {
@@ -22,7 +23,7 @@ select {
     }
 
     @include tablet {
-        padding: 32px;
+        padding: 0px 32px 32px 32px;
 
         &__title {
             font-size: 30px;

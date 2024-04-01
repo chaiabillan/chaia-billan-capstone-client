@@ -9,19 +9,25 @@ import hero from '../../assets/images/hero-resources.jpeg'
 import hero2 from '../../assets/images/resources-allergy-card2.jpeg'
 import hero3 from '../../assets/images/IMG_3830.jpeg';
 import hero4 from '../../assets/images/resources2.jpeg'
+import Yummly from '../../Components/Yummly/Yummly';
 
 
 function ResourcesPage() {
   const [selectedResource, setSelectedResource] = useState(null);
   const location = useLocation();
+  // const emergencyNumberRef = useRef(null);
+  // const allergyCardsRef = useRef(null);
+  // const allergyFriendlyRestaurantsRef = useRef(null);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const selected = searchParams.get('selectedResource');
     setSelectedResource(selected);
 
-    if (selected === 'emergency-number') {
-      window.scrollTo(0, 2000);
+    if (selected === 'emergency-number' || selected === 'allergy-cards' || selected === 'yummly' || selected === 'allergy-friendly-restaurants') {
+      setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      }, 50);
     } else {
       window.scrollTo(0, 0);
     }
@@ -30,12 +36,16 @@ function ResourcesPage() {
 
   const handleResourceClick = (resource) => {
     setSelectedResource(resource);
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 50);
   };
 
   return (
     <>
       <section className='hero'>
-        <img className='hero__image hero__image--resources' src={hero4}/>
+        <img className='hero__image hero__image--resources' src={hero4} />
+        <p className='hero__title--resources'>Resources</p>
       </section>
       <section className='introduction'>
         <div className='introduction__text'>
@@ -46,39 +56,35 @@ function ResourcesPage() {
       </section>
       <section className='resources'>
         <ul className='spotlight spotlight__resources'>
-          <li className={`spotlight__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-cards')}>Allergy Cards</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>Allergy-Friendly <br></br>Restaurants</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-cards')}>Allergy Cards</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>Allergy-Friendly <br></br>Restaurants</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('emergency-number')}>Emergency Number</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-cards')}>Allergy Cards</Link>
-          </li>
-          <li className={`spotlight__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
-            <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>Allergy-Friendly <br></br>Restaurants</Link>
-          </li>
+          <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('emergency-number')}>
+            <li className={`spotlight__item ${selectedResource === 'emergency-number' ? 'selected' : ''}`}>
+              Emergency <br></br> Number
+            </li>
+          </Link>
+          <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-cards')}>
+            <li className={`spotlight__item ${selectedResource === 'allergy-cards' ? 'selected' : ''}`}>
+              Chef Cards
+            </li>
+          </Link>
+          <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('allergy-friendly-restaurants')}>
+            <li className={`spotlight__item ${selectedResource === 'allergy-friendly-restaurants' ? 'selected' : ''}`}>
+              Spokin
+            </li>
+          </Link>
+          <Link to="#" className='spotlight__item--text spotlight__item--text--resources' onClick={() => handleResourceClick('yummly')}>
+            <li className={`spotlight__item ${selectedResource === 'yummly' ? 'selected' : ''}`}>
+              Yummly
+            </li>
+          </Link>
+
         </ul>
       </section>
       <section>
         {selectedResource === 'emergency-number' && <EmergencyNumber />}
         {selectedResource === 'allergy-cards' && <AllergyCards />}
         {selectedResource === 'allergy-friendly-restaurants' && <AllergyFriendlyRestaurants />}
+        {selectedResource === 'yummly' && <Yummly />}
+
       </section>
     </>
   );

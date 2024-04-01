@@ -34,45 +34,46 @@ function TravelGuidePage() {
                 </div>
             </section>
             <section className='flights guide'>
-                <div className='guide__dropdown'>
-                    <p className='guide__dropdown--title'>Staying safe on flights</p>
-                    <Link to='#' onClick={() => handleSectionClick('flights')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
-                        {/* <img className='guide__dropdown--arrow' src={arrow} /> */}
+                <Link to='#' onClick={() => handleSectionClick('flights')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} style={{ textDecoration: 'none' }}>
+                    <div className='guide__dropdown'>
+                        <p className='guide__dropdown--title'>Staying safe on flights</p>
                         <div className='guide__dropdown--arrow--new'></div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
                 {showSection === 'flights' &&
-                    <FlightInfo/>
+                    <FlightInfo />
                 }
             </section>
             <section className='restaurant guide'>
-                <div className='guide__dropdown'>
-                    <p className='guide__dropdown--title'>Eating at Restaurants</p>
-                    <Link to='#' onClick={() => handleSectionClick('restaurant')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
+                <Link to='#' onClick={() => handleSectionClick('restaurant')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} style={{ textDecoration: 'none' }}>
+
+                    <div className='guide__dropdown'>
+                        <p className='guide__dropdown--title'>Eating at Restaurants</p>
                         <div className='guide__dropdown--arrow--new'></div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
                 {showSection === 'restaurant' &&
-                    <RestaurantInfo/>
+                    <RestaurantInfo />
                 }
             </section>
             <section className='flights guide'>
-                <div className='guide__dropdown'>
-                    <p className='guide__dropdown--title'>Cooking</p>
-                    <Link to='#' onClick={() => handleSectionClick('cooking')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
+                <Link to='#' onClick={() => handleSectionClick('cooking')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} style={{ textDecoration: 'none' }}>
+                    <div className='guide__dropdown'>
+                        <p className='guide__dropdown--title'>Cooking</p>
                         <div className='guide__dropdown--arrow--new'></div>
-                    </Link>                </div>
+                    </div>
+                </Link>
                 {showSection === 'cooking' &&
-                    <CookingInfo/>
+                    <CookingInfo />
                 }
             </section>
             <section className='emergencies guide'>
-                <div className='guide__dropdown'>
-                    <p className='guide__dropdown--title'>Emergencies</p>
-                    <Link to='#' onClick={() => handleSectionClick('emergencies')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} >
+                <Link to='#' onClick={() => handleSectionClick('emergencies')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} style={{ textDecoration: 'none' }}>
+                    <div className='guide__dropdown'>
+                        <p className='guide__dropdown--title'>Emergencies</p>
                         <div className='guide__dropdown--arrow--new'></div>
-                    </Link>                                
-                </div>
+                    </div>
+                </Link>
                 {showSection === 'emergencies' &&
                     <EmergencyInfo />
                 }
