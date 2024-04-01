@@ -1,6 +1,6 @@
 # chaia-billan-capstone
 
-# Traveling with allergies
+# My Allergy Compass
 
 ## Overview
 
@@ -9,31 +9,31 @@ Traveling with food allergies can be daunting and stressful, especially when nav
 
 ### Problem
 
-Oftentimes, while traveling, eating out is one of the most exciting aspects! It's a great social activity, and trying traditional foods can be delicious and eye-opening. However, it can be frightening for those who have food allergies, especially when the servers dont speak English. This fear is exacerbated when traveling alone because there may not be anyone in the vicinity who is able to help you in the case of an emergency. There is quite a deficit of educational resources online for this specific situation, and those that are available are difficult to find without word-of-mouth referrals. This may prevent people with food allergies from believing that they are cabable of traveling to certain places.
+Exploring local cuisine while traveling is often a highlight of the journey! It's a fantastic way to connect with the culture and people, and tasting traditional dishes can be both delicious and enlightening. However, it can be frightening for those who have food allergies, especially when the servers dont speak English. This fear is exacerbated when traveling alone because there may not be anyone in the vicinity who is able to help you in the case of an emergency. There is quite a deficit of educational resources online for this specific situation, and those that are available are difficult to find without word-of-mouth referrals. This may prevent people with food allergies from believing that they are cabable of traveling to certain places.
 
 
 ### User Profile
 
 - Travelers with food allergies:
     - wanting to educate themselves about how to stay safe when eating out abroad
-    - want to feel more confident in their ability to travel safely
-    - want to have a website that they can refer back to in the future that has all the information in place
+    - who want to feel more confident in their ability to travel safely
+    - who want to have a website that they can refer back to in the future that has all the information in place
 
 
 ### Features
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
-- As a user, I want to be able to create "chef cards" that I can show to restaurant staff. These will explain my allergies in the official language of the country I am viting to ensure understanding. 
-
 - As a user, I want a comprehensive guide for eating out at restaurants in foreign countries (how to plan which restaurants to eat at, how to communicate with the restaurant staff, how to clean the table before eating)
 
 - As a user, I want access to a forum where I can read other users posts about their tips and experiences regarding allergy-safety while traveling. I also want to be able to post questions about my concerns that others can respond to. 
-    - I want to filter the advice by subject and likes for an easy viewing experience
-
-- As a user, I want to be able to quickly find the emergency phone number of the country I am visiting (9-1-1 equivalent) which I can then add to my contacts.
+    - I want to be able to filter the advice by subject and likes for an easy viewing experience
 
 - As a user, I want access to advice in regards to reading menus and food labels in different languages
+
+- As a user, I want to be able to create "chef cards" that I can show to restaurant staff. These will explain my allergies in the official language of the country I am viting to ensure understanding. 
+
+- As a user, I want to be able to quickly find the emergency phone number of the country I am visiting (9-1-1 equivalent) which I can then add to my contacts.
 
 - As a user, I want to learn about what scenario kits are and when to use them 
 
@@ -49,7 +49,6 @@ List the functionality that your app will include. These can be written as user 
 ### Tech Stack
 
 - React
-- TypeScript
 - MySQL
 - Express
 - JWT
@@ -65,12 +64,7 @@ List the functionality that your app will include. These can be written as user 
 
 ### APIs
 
-List any external sources of data that will be used in your app.
-
-https://emergencynumberapi.com/
-- API that has emerngency information for each city 
-    - links emergency rooms to google maps 
-    - provides the emergency phone number of that country
+ChatGPT - provided the phone number for ambulances for every country in the world which I used in my database.
 
 ### Sitemap
 
@@ -88,6 +82,7 @@ About
         - travelling alone is already hard
         - let alone with the worries of this 
     - driven by my own desire to enable myself to travel with less anxiety and fear 
+    - gallery of photos of food I was able to safely enjoy while traveling
     
 Community page
     - this is where people can post advice, experiences, and questions
@@ -140,64 +135,50 @@ Replies Table: This table would store the replies to individual comments. It mig
 - reply_text: The text of the reply.
 - timestamp: The timestamp of when the reply was posted.
 
+Ambulance Number Table: 
+
 
 ### Endpoints
 
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
-**GET api/country/{code}**
+**GET api/emergency number**
 
-- get the emergency phone number for a selected country 
+- get the list of all countries in the world
 
 Parameters: none
 
 Response: 
 ```
 {
-    "disclaimer": "The data from this API is provided without any claims of accuracy, you should use this data as guidance, and do your own due diligence.",
-    "error": "",
-    "data": {
-        "country": {
-            "name": "Canada",
-            "ISOCode": "CA",
-            "ISONumeric": "124"
-        },
-        "ambulance": {
-            "all": [
-                ""
-            ],
-            "gsm": null,
-            "fixed": null
-        },
-        "fire": {
-            "all": [
-                ""
-            ],
-            "gsm": null,
-            "fixed": null
-        },
-        "police": {
-            "all": [
-                ""
-            ],
-            "gsm": null,
-            "fixed": null
-        },
-        "dispatch": {
-            "all": [
-                "911"
-            ],
-            "gsm": [
-                "112"
-            ],
-            "fixed": null
-        },
-        "member_112": false,
-        "localOnly": false,
-        "nodata": false
-    }
+    "countries": [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        ...
+    ]
 }
 ```
+
+**GET api/emergency number/:countryName**
+
+- get the ambulance phone number for specified country 
+
+Parameters: name of country (e.g., canada)
+
+Response: 
+```
+{
+    "ambulance_phone": "911"
+}
+```
+
 
 **GET /api/comments**
 
@@ -333,8 +314,10 @@ Response:
 
 Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
 
-This would be implemented if I have enough time at the end. 
+This would be implemented after the project deadline. 
     - the user would be able to login in order to
+        - post and delete their own comments and replies
+        - like comments and replies (once)
         - see notifications
             - if anyone liked or responded to their post
         - access saved content such as recipes, articles, posts, etc.
