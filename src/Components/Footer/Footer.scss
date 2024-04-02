@@ -2,14 +2,230 @@
 @use '../../styles/partials/mixins' as *;
 
 .footer {
-    height: auto;
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
     background-color: $Blue;
+    padding: 16px;
+
+    &__top {
+
+        &--left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 
     @include tablet {
         height: auto;
+        padding: 16px 32px;
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            align-items: center;
+
+            &--left {
+                flex-direction: column;
+                width: 50%;
+            }
+
+        }
     }
 
     @include desktop {
         height: auto;
     }
 }
+
+.logo {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    padding: 16px 0px;
+
+    &__title {
+        font-size: 20px;
+        color: white;
+        margin: 0px;
+        font-weight: 600;
+        padding-right: 7px;
+        line-height: 26px;
+    }
+
+    &__image {
+        height: 45px;
+        width: 45px;
+        // padding-left: 10px;
+    }
+
+    @include tablet {
+        border: none;
+        width: 100%;
+
+        &__title {
+            font-size: 25px;
+
+            &--break {
+                display: none;
+            }
+        }
+    }
+
+    @include desktop {
+
+        &__title {
+            font-size: 31px;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 16px 0px;
+
+    &__title {
+        color: white;
+        margin: 0px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__icons {
+        background-color: $Blue;
+        fill: white;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        &--linkedin {
+            padding-right: 8px;
+
+            &--image {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        &--email {
+            color: white;
+            padding-left: 8px;
+            position: relative;
+            top: 1px;
+
+            &--image {
+                height: 23px;
+                width: 23px;
+            }
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        // border-right: 1px solid white;
+        flex-direction: row;
+        // align-items: center;
+
+        &__title {
+            font-size: 25px;
+            padding-right: 16px;
+        }
+
+        &__icons {
+            position: relative;
+            bottom: 5px;
+
+            &--linkedin--image {
+                width: 25px;
+                height: 25px;
+            }
+
+            &--email {
+                top: 4px;
+            
+                &--image {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+
+        }
+    }
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid white;
+    padding-top: 16px;
+    // margin-top: 16px;
+
+    &__label {
+        color: white;
+        font-weight: 600;
+        padding-bottom: 8px;
+    }
+
+    &__input {
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 8px;
+        padding: 4px;
+    }
+
+    &__button {
+        border: none;
+        border-radius: 8px;
+        background-color: $Green;
+        color: white;
+        margin-bottom: 8px;
+        padding: 4px 4px 4px 10px;
+        font-weight: 600;
+    }
+
+    @include tablet {
+        width: 50%;
+        border: none;
+        border-left: solid 1px white;
+        padding-left: 32px;
+
+        &__label {
+            font-size: 20px;
+        }
+    }
+
+    @include desktop {
+
+        &__label {
+            font-size: 23px;
+        }
+
+        &__button {
+            width: 30%;
+            align-self: flex-end;
+            font-size: 20px;
+        }
+    }
+}
+
+.copyright {
+    margin: 0px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+
+    @include tablet {
+        font-size: 18px;
+    }
+}
+

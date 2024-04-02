@@ -56,6 +56,7 @@ List the functionality that your app will include. These can be written as user 
     - react
     - react-router
     - axios
+    - Bootstrap
 - Server libraries:
     - knex
     - express
