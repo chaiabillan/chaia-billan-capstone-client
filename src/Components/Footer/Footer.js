@@ -1,6 +1,7 @@
 import './Footer.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Envelope } from 'bootstrap-icons-react';
+// import { Envelope } from 'bootstrap-icons-react';
+import {Envelope} from 'react-bootstrap-icons';
 import linkedin from '../../assets/images/linkedin-xxl.png'
 import axios from 'axios';
 import { useState } from 'react';

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ReplyForm from '../ReplyForm/ReplyForm';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Heart, HeartFill } from 'bootstrap-icons-react';
+import { Heart, HeartFill } from 'react-bootstrap-icons';
 
 function CommentItem({comment, onDelete, fetchComments, commentId}) {
     const [showReplyForm, setShowReplyForm] = useState(false);

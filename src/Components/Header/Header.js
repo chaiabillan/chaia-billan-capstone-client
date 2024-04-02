@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom'
 import dropdownMenu from '../../assets/images/menu-list-dropdown.svg'
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { List } from 'bootstrap-icons-react';
+import { List } from 'react-bootstrap-icons';
+
 
 function Header() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
