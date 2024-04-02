@@ -24,10 +24,9 @@ Exploring local cuisine while traveling is often a highlight of the journey! It'
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
-- As a user, I want a comprehensive guide for eating out at restaurants in foreign countries (how to plan which restaurants to eat at, how to communicate with the restaurant staff, how to clean the table before eating)
+- As a user, I want a comprehensive guide for traveling with allergies in foreign countries (how to plan which restaurants to eat at, how to communicate with the restaurant staff, how to clean the table before eating)
 
 - As a user, I want access to a forum where I can read other users posts about their tips and experiences regarding allergy-safety while traveling. I also want to be able to post questions about my concerns that others can respond to. 
-    - I want to be able to filter the advice by subject and likes for an easy viewing experience
 
 - As a user, I want access to advice in regards to reading menus and food labels in different languages
 
@@ -35,13 +34,7 @@ List the functionality that your app will include. These can be written as user 
 
 - As a user, I want to be able to quickly find the emergency phone number of the country I am visiting (9-1-1 equivalent) which I can then add to my contacts.
 
-- As a user, I want to learn about what scenario kits are and when to use them 
-
 - As a user, I want to easily find external resources that are also helpful in this situation (e.g, spokin.com)
-
-- As a user, I want access to educational resources
-    - Offer articles, videos, and infographics about food allergies, including information on different types of allergies, symptoms, treatment options, and allergy management strategies.
-    - maybe point them towards yummly or something to find easy recipes because i think thats beyond the scope of this 
 
 
 ## Implementation
@@ -51,17 +44,15 @@ List the functionality that your app will include. These can be written as user 
 - React
 - MySQL
 - Express
-- JWT
 - Client libraries: 
     - react
     - react-router
     - axios
-    - Bootstrap
+    - bootstrap
 - Server libraries:
     - knex
     - express
     - axios
-    - bcrypt for password hashing (optional)
 
 ### APIs
 
@@ -74,6 +65,7 @@ List the pages of your app with brief descriptions. You can show this visually, 
 Homepage 
     - nav bar that points
     - hero section with an inspirational quote 
+    - spotlight section with all the special resources
 
 About 
     - about the author 
@@ -87,9 +79,7 @@ About
     
 Community page
     - this is where people can post advice, experiences, and questions
-    - people can reply and like these posts
-    - when you post a comment, you must specify the subject
-        - when reading other peoples posts, you can filter by subject in order to find what youre looking for
+    - people can reply, delete and like these posts
 
 Travel Guide Page
     - this page will have different sections for flights, eating at restaurants, etc.
@@ -136,7 +126,9 @@ Replies Table: This table would store the replies to individual comments. It mig
 - reply_text: The text of the reply.
 - timestamp: The timestamp of when the reply was posted.
 
-Ambulance Number Table: 
+Ambulance Number Table: This table stores the emails submitted to join the mailing list. The columns include: 
+- user_id (primary key): A unique identifier for each comment.
+- user_email: The email submitted by the user.
 
 
 ### Endpoints
@@ -177,6 +169,19 @@ Response:
 ```
 {
     "ambulance_phone": "911"
+}
+```
+
+**POST /api/emails**
+
+- post a new email to mailing list 
+
+Parameters: none
+
+Response: 
+```
+{
+    "message": "Email added successfully"
 }
 ```
 
@@ -315,7 +320,7 @@ Response:
 
 Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
 
-This would be implemented after the project deadline. 
+This will be implemented after the project deadline. 
     - the user would be able to login in order to
         - post and delete their own comments and replies
         - like comments and replies (once)
@@ -389,3 +394,5 @@ Your project will be marked based on what you committed to in the above document
 
 - information about what traditional dishes from a certain cuisine would be suitable to order at a restaurant
     - For example, if you’re allergic to soy and want to eat at a Chinese restaurant, it will spotlight Chinese dishes and ingredients that typically contain soy sauce. If you’re allergic to dairy and plan to dine out at an Italian eatery, it’ll flag ingredients and dishes containing cheese.
+
+- As a user, I want to learn about what scenario kits are and when to use them 
