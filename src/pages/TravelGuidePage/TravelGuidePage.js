@@ -36,7 +36,7 @@ function TravelGuidePage() {
             <section className='flights guide'>
                 <Link to='#' onClick={() => handleSectionClick('flights')} className={`${showSection === 'flights' ? 'selected-section' : ''}`} style={{ textDecoration: 'none' }}>
                     <div className='guide__dropdown'>
-                        <p className='guide__dropdown--title'>Staying safe on flights</p>
+                        <p className='guide__dropdown--title'>Staying Safe on Flights</p>
                         <div className='guide__dropdown--arrow--new'></div>
                     </div>
                 </Link>
