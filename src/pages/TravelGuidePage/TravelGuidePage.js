@@ -12,8 +12,9 @@ function TravelGuidePage() {
     const [showSection, setShowSection] = useState(false);
 
     const handleSectionClick = (section) => {
-        setShowSection(showSection !== section ? section : null);
-    }
+        setTimeout(() => {
+            setShowSection(showSection !== section ? section : null);
+        }, 50);    }
 
     return (
         <>

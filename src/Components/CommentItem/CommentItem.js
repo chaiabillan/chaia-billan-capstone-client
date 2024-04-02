@@ -116,7 +116,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                     </div>
                     <div className='comment__actions--right'>
                         <button className="heart-image" onClick={handleCommentLike}>
-                                {liked ? <HeartFill /> : <Heart />}
+                                {liked ? <HeartFill className='heart-image__fill'/> : <Heart className='heart-image__outline'/>}
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
                             <button className='comment__actions--right--reply' onClick={handleToggleReplyForm}>Reply</button>
@@ -144,7 +144,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                                 </div>
                                 <div className='comment__actions--right'>
                                     <button className="heart-image" onClick={() => handleReplyLike(reply.reply_id)}>
-                                        {likedReplies[reply.reply_id] ? <HeartFill /> : <Heart />}
+                                        {likedReplies[reply.reply_id] ? <HeartFill className='heart-image__fill'/> : <Heart className='heart-image__outline'/>}
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
                                     <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button>

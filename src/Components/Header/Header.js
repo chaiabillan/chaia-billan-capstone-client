@@ -1,8 +1,9 @@
 import './Header.scss'
 import { Link, useLocation } from 'react-router-dom'
 import dropdownMenu from '../../assets/images/menu-list-dropdown.svg'
-import dropdown2 from '../../assets/images/dropdown2.jpeg'
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { List } from 'bootstrap-icons-react';
 
 function Header() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,7 +20,8 @@ function Header() {
     return (
         <section className='nav-bar'>
              <div className='nav-bar__dropdown'>
-                    <img href='#' className='nav-bar__dropdown--button' src={dropdownMenu} onClick={toggleDropdown}/>
+                    {/* <img href='#' className='nav-bar__dropdown--button' src={dropdownMenu} onClick={toggleDropdown}/> */}
+                    < List className='nav-bar__dropdown--button' onClick={toggleDropdown} />
                 <div className={`nav-bar__dropdown-content ${dropdownOpen ? 'open' : ''}`} onClick={closeDropdown}>
                     <Link to='/' className='nav-bar__dropdown-content--link'>
                         Home
