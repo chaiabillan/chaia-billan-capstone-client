@@ -32,8 +32,8 @@
     @include desktop {
 
         &__title--community {
-            top: 150px;
-            right: 629px;
+            top: 137px;
+            right: 805px;
             font-size: 58px;
         }
 
@@ -42,3 +42,12 @@
         }
     }
 }
+
+// .comments-all { //this is whats making the comment section side by side
+//     display: flex;
+//     flex-direction: column;
+
+//     @include desktop {
+//         flex-direction: row;
+//     }
+// }

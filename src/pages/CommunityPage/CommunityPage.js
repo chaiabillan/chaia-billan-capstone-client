@@ -43,8 +43,11 @@ function CommunityPage () {
                     </p>
                 </div>
             </section>
-            < PostCommentForm  fetchComments={fetchComments}/>
-            < CommentList comments={comments} onDeleteComment={handleDeleteComment} fetchComments={fetchComments}/>
+            <section className='comments-all'>
+                < PostCommentForm  fetchComments={fetchComments}/>
+                < CommentList comments={comments} onDeleteComment={handleDeleteComment} fetchComments={fetchComments}/>
+            </section>
+            
         </>
     )
 }
