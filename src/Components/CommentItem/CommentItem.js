@@ -1,12 +1,15 @@
 import './CommentItem.scss'
 import { useState } from 'react';
-import heart2 from '../../assets/images/2048px-Ei-heart.svg.png';
 import ReplyForm from '../ReplyForm/ReplyForm';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Heart, HeartFill } from 'bootstrap-icons-react';
 
 function CommentItem({comment, onDelete, fetchComments, commentId}) {
     const [showReplyForm, setShowReplyForm] = useState(false);
     const [showReplies, setShowReplies] = useState(true);
+    const [liked, setLiked] = useState(false);
+    const [likedReplies, setLikedReplies] = useState({});
 
         const calculateTimeAgo = (timestamp) => {         
             const now = new Date();
@@ -74,6 +77,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
         try {
             await axios.put(`http://localhost:8080/api/comments/${commentId}`);
             fetchComments(); 
+            setLiked(true);
         } catch (error) {
             console.error('Error liking comment:', error);
         }
@@ -83,6 +87,10 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
         try {
             await axios.put(`http://localhost:8080/api/replies/${commentId}/${replyId}`);
             fetchComments(); 
+            setLikedReplies(prevState => ({
+                ...prevState,
+                [replyId]: true 
+            }));
         } catch (error) {
             console.error('Error liking comment:', error);
         }
@@ -108,7 +116,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                     </div>
                     <div className='comment__actions--right'>
                         <button className="heart-image" onClick={handleCommentLike}>
-                            <img src={heart2} alt='heart'/>
+                                {liked ? <HeartFill /> : <Heart />}
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
                             <button className='comment__actions--right--reply' onClick={handleToggleReplyForm}>Reply</button>
@@ -136,7 +144,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                                 </div>
                                 <div className='comment__actions--right'>
                                     <button className="heart-image" onClick={() => handleReplyLike(reply.reply_id)}>
-                                        <img src={heart2} alt='heart'/>
+                                        {likedReplies[reply.reply_id] ? <HeartFill /> : <Heart />}
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
                                     <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button>
