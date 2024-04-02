@@ -25,15 +25,6 @@ function PostForm({ onSubmit, labels, initialData, keys }) {
       formData[keys[index]] = inputRefs.current[label].current.value;
     });
 
-
-    // for (let i = 0; i < labels.length; i++) {
-    //     const label = labels[i];
-    //     const key = keys[i];
-    // if (inputRefs.current[label] && inputRefs.current[label].current) {
-    //   formData[key] = inputRefs.current[label].current.value;
-    // }
-    // }
-
     try {
         await onSubmit(event, formData);
       } catch (err) {

@@ -14,7 +14,7 @@
         position: absolute;
         color: white;
         font-weight: 700;
-        top: 31px;
+        top: 57px;
         font-size: 26px;  
         text-shadow: 2px 2px 2px black;      
     }
@@ -29,7 +29,7 @@
 
         &__title--resources {
             font-size: 48px;
-            top: 60px;
+            top: 108px;
         }
     }
 
@@ -43,7 +43,7 @@
 
         &__title--resources {
             font-size: 62px;
-            top: 60px;
+            top: 120px;
             
         }
     }
@@ -83,8 +83,6 @@
             color: white;
             font-weight: 600;
             display: inline-block;
-            /* Ensure each link is displayed in a single line */
-
         }
     }
 }

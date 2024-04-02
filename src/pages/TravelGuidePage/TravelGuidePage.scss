@@ -9,8 +9,7 @@
 
     &__title {
         &--travel-guide {
-            // left: 67px;
-            top: 32px;
+            top: 50px;
             color: white;
             font-size: 21px;
             font-weight: bolder;
@@ -29,8 +28,7 @@
 
         &__title {
             &--travel-guide {
-                // left: -41px;
-                top: 72px;
+                top: 120px;
                 font-size: 38px;
             }
         }
@@ -43,7 +41,6 @@
             &--guide {
                 top: 65px;
                 height: 677px;
-
             }
         }
 
@@ -51,9 +48,8 @@
 
             &--travel-guide {
                 left: 370px;
-                top: 112px;
+                top: 153px;
                 font-size: 56px;
-            
             }
         }
     }
@@ -87,7 +83,7 @@
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
                 border-bottom: 7px solid white;
-                transform: rotate(180deg); /* Adjust rotation as needed */
+                transform: rotate(180deg);
     
             }
         }
@@ -114,13 +110,9 @@
             &--arrow {
 
                 &--new {
-                    // width: 0;
-                    // height: 0;
                     border-left: 9px solid transparent;
                     border-right: 9px solid transparent;
-                    border-bottom: 15px solid white;
-                    // transform: rotate(180deg); 
-        
+                    border-bottom: 15px solid white;        
                 }
             }
         }
@@ -145,13 +137,9 @@
             &--arrow {
 
                 &--new {
-                    // width: 0;
-                    // height: 0;
                     border-left: 13px solid transparent;
                     border-right: 13px solid transparent;
                     border-bottom: 20px solid white;
-                    // transform: rotate(180deg); 
-        
                 }
             }
         }

@@ -5,6 +5,7 @@ import linkedin from '../../assets/images/linkedin-xxl.png'
 import axios from 'axios';
 import { useState } from 'react';
 import logo from '../../assets/images/Designer.svg'
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -21,6 +22,8 @@ function Footer() {
             console.log('Response:', response.data);
 
             setEmail('');
+
+            alert('Email submitted successfully!');
         } catch (error) {
             console.error('Error submitting email:', error);
         }
@@ -31,7 +34,7 @@ function Footer() {
             <section className='footer__top'>
                 <div className='footer__top--left'>
                     <div className='logo'>
-                        <p className='logo__title'>My Allergy <br className='logo__title--break'></br> Compass</p>
+                        <p className='logo__title'><Link to='/' className='link__logo'>  My Allergy <br className='logo__title--break'></br> Compass</Link></p>
                         <img className='logo__image' src={logo} alt='logo'/>
                     </div>
                     <div className='contact'>
@@ -50,7 +53,7 @@ function Footer() {
                 </div>
                 <form onSubmit={handleSubmit} className='email-form'>
                     <label className='email-form__label'>
-                        Enter your email to be notified about new resources and updates!
+                        Join the email list to be notified about new resources and updates!
                     </label>
                     <input
                         type="email"

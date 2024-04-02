@@ -20,7 +20,7 @@
 
     @include tablet {
         height: auto;
-        padding: 16px 32px;
+        padding: 32px 32px;
 
         &__top {
             display: flex;
@@ -38,6 +38,7 @@
 
     @include desktop {
         height: auto;
+
     }
 }
 
@@ -47,7 +48,7 @@
     justify-content: center;
     align-items: center;
     border-right: 1px solid white;
-    padding: 16px 0px;
+    padding: 16px 0px 0px 0px;
 
     &__title {
         font-size: 20px;
@@ -56,12 +57,13 @@
         font-weight: 600;
         padding-right: 7px;
         line-height: 26px;
+        margin-bottom: 16px;
     }
 
     &__image {
         height: 45px;
         width: 45px;
-        // padding-left: 10px;
+        margin-bottom: 16px;
     }
 
     @include tablet {
@@ -69,18 +71,11 @@
         width: 100%;
 
         &__title {
-            font-size: 25px;
+            font-size: 30px;
 
             &--break {
                 display: none;
             }
-        }
-    }
-
-    @include desktop {
-
-        &__title {
-            font-size: 31px;
         }
     }
 }
@@ -132,9 +127,7 @@
 
     @include tablet {
         width: 100%;
-        // border-right: 1px solid white;
         flex-direction: row;
-        // align-items: center;
 
         &__title {
             font-size: 25px;
@@ -151,7 +144,7 @@
             }
 
             &--email {
-                top: 4px;
+                top: 3px;
             
                 &--image {
                     width: 26px;
@@ -168,7 +161,6 @@
     flex-direction: column;
     border-top: 1px solid white;
     padding-top: 16px;
-    // margin-top: 16px;
 
     &__label {
         color: white;
@@ -198,6 +190,7 @@
         border: none;
         border-left: solid 1px white;
         padding-left: 32px;
+        padding-top: 0px;
 
         &__label {
             font-size: 20px;

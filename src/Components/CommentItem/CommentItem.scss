@@ -176,19 +176,15 @@
 
                 &--reply {
                     font-size: 25px;
-
                 }
 
                 &--likes {
                     font-size: 25px;
-
                 }
 
                 &--delete {
                     font-size: 25px;
                 }
-
-
             }
 
             &--left {
@@ -203,13 +199,6 @@
 
 .replies {
     padding-left: 32px;
-    // padding-top: 8px;
-
-    // &__indiv {
-        // padding-top: 9px;
-        // position: relative;
-
-    // }
 
     @include tablet {
         padding-left: 100px;
@@ -221,9 +210,9 @@
 }
 
 .heart-image {
-    width: 21px; /* Adjust the width of the container */
-    height: 21px; /* Adjust the height of the container */
-    overflow: hidden; /* Hide the overflow outside the container */
+    width: 21px; 
+    height: 21px; 
+    overflow: hidden; 
     border: none;
     padding: 0px;
     background-color: transparent;
@@ -240,9 +229,9 @@
 }
   
   .heart-image img {
-    width: 100%; /* Ensure the image fills the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Crop the image to cover the container */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
     background-color: transparent;
   }
   

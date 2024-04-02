@@ -12,8 +12,8 @@ function FlightInfo() {
                         For a worry-free flight experience, I strongly advise reaching out to your airline a few weeks prior to your departure. 
                         Inquire about the accommodations they provide for passengers with allergies. In many cases, after completing the requisite form, 
                         airlines offer priority boarding. This grants you the time needed to meticulously sanitize your seat and tray table, minimizing
-                        the risk of allergen exposure. For example, here is the link to the WestJet form which you can submit several weeks
-                        ahead of your flight to request accommodations: <a href='https://www.westjet.com/en-ca/special-needs/allergies' className='link'>Link</a>.
+                        the risk of allergen exposure. For example, here is the <a href='https://www.westjet.com/en-ca/special-needs/allergies' className='link'>link</a> to the WestJet form which you can submit several weeks
+                        ahead of your flight to request accommodations.
                     </p>
                     <p className='information__body--header'>
                         Well Too Wipes

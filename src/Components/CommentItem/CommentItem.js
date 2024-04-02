@@ -1,19 +1,14 @@
 import './CommentItem.scss'
-import { useEffect, useState } from 'react';
-import heart from '../../409001-200.png';
+import { useState } from 'react';
 import heart2 from '../../assets/images/2048px-Ei-heart.svg.png';
 import ReplyForm from '../ReplyForm/ReplyForm';
 import axios from 'axios';
 
 function CommentItem({comment, onDelete, fetchComments, commentId}) {
-    const [timeAgo, setTimeAgo] = useState('');
     const [showReplyForm, setShowReplyForm] = useState(false);
     const [showReplies, setShowReplies] = useState(true);
 
-    // useEffect(() => {
-        const calculateTimeAgo = (timestamp) => { // added timestamp
-            // const timestamp = new Date(comment.timestamp);
-            
+        const calculateTimeAgo = (timestamp) => {         
             const now = new Date();
             const diff = Math.abs(now - timestamp);
             const seconds = Math.floor(diff / 1000);
@@ -42,13 +37,8 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
             } else {
                 timeAgoString = 'just now';
             }
-            // setTimeAgo(timeAgoString);
             return timeAgoString
         };
-        // calculateTimeAgo();
-    // }, [comment.timestamp, comment.replies]);
-
-    // console.log(commentId);
 
     const handleDeleteReply = async (replyId) => {
         try {
@@ -98,17 +88,12 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
         }
     }
 
-
-
     return (
         <>
             <div className='comment'>
                     <div className='comment__details'>
                         <p className='comment__details--name'>{comment.username}</p>
-                        {/* <p className='comment__details--time'>{timeAgo}</p>
-                         */}
                         <p className='comment__details--time'>{calculateTimeAgo(new Date(comment.timestamp))}</p>
-
                     </div>
                     <div className='comment__text'>
                     <p className='comment__text--content'>{comment.comment_text}</p>
@@ -159,9 +144,9 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                             </div>
                         </div>
                     ))}
-                </div>)}
-                
                 </div>
+                )}
+            </div>
         </>
     )
 }

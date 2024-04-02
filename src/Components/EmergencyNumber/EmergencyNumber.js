@@ -37,7 +37,6 @@ function EmergencyNumber() {
     return (
         <>
         <section className='ambulance-number'>
-            {/* <button className='ambulance-number__back'> Back</button> */}
             <p className='ambulance-number__title'>Did you know that every country has a different phone number (9-1-1 equivalent) to reach emergency services?</p>
             <p className='ambulance-number__subtitle'>This resource will help you explore the different phone numbers that countries use to reach an ambulance in case of an emergency</p>
             <form className='get-number-form'id="countryForm" onSubmit={handleSubmit}>

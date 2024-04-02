@@ -12,7 +12,7 @@
         position: absolute;
         color: white;
         font-weight: 700;
-        top: 66px;
+        top: 77px;
         font-size: 26px;
         text-shadow: 2px 2px 2px black;
     }
@@ -20,11 +20,8 @@
     @include tablet {
 
         &__title--community {
-
             font-size: 40px;
-            top: 86px;
-            // right: 85px;
-            
+            top: 104px;            
         }
 
         &__image--community {
@@ -35,7 +32,7 @@
     @include desktop {
 
         &__title--community {
-            top: 99px;
+            top: 150px;
             right: 629px;
             font-size: 58px;
         }

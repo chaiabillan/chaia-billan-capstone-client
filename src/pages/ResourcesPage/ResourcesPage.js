@@ -20,7 +20,7 @@ function ResourcesPage() {
 
     if (selected === 'emergency-number' || selected === 'allergy-cards' || selected === 'yummly' || selected === 'allergy-friendly-restaurants') {
       setTimeout(() => {
-        window.scrollTo(0, document.body.scrollHeight);
+        window.scrollTo(0, 450);
       }, 50);
     } else {
       window.scrollTo(0, 0);
@@ -31,7 +31,7 @@ function ResourcesPage() {
   const handleResourceClick = (resource) => {
     setSelectedResource(resource);
     setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
+      window.scrollTo(0, 450);
     }, 50);
   };
 
