@@ -218,14 +218,22 @@
     padding: 0px;
     background-color: transparent;
 
+    &__fill {
+        color: red;
+    }
+
+    &__outline {
+        color: red;
+    }
+
     @include tablet {
         width: 28px;
         height: 30px;
     }
 
     @include desktop {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
   
