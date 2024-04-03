@@ -16,6 +16,7 @@ function EmergencyNumber() {
         try {
           const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/emergency-number`); // Assuming endpoint for fetching countries is '/api/countries'
           setCountryNames(response.data.countries);
+          console.log('Response:', response.data.countries);
         } catch (error) {
           console.error('Error fetching countries:', error);
         }
