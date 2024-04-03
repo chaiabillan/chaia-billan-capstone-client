@@ -45,7 +45,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
 
     const handleDeleteReply = async (replyId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/replies/${commentId}/${replyId}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/replies/${commentId}/${replyId}`);
             fetchComments(); 
         } catch (error) {
             console.error('Error deleting reply:', error);
@@ -75,7 +75,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
 
     const handleCommentLike = async () => {
         try {
-            await axios.put(`http://localhost:8080/api/comments/${commentId}`);
+            await axios.put(`${process.env.REACT_APP_API_URL}/api/comments/${commentId}`);
             fetchComments(); 
             setLiked(true);
         } catch (error) {
@@ -85,7 +85,7 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
 
     const handleReplyLike = async (replyId) => {
         try {
-            await axios.put(`http://localhost:8080/api/replies/${commentId}/${replyId}`);
+            await axios.put(`${process.env.REACT_APP_API_URL}/api/replies/${commentId}/${replyId}`);
             fetchComments(); 
             setLikedReplies(prevState => ({
                 ...prevState,

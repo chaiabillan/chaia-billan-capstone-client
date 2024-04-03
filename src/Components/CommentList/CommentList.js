@@ -6,7 +6,7 @@ function CommentList({comments, onDeleteComment, fetchComments}) {
 
     const handleDeleteComment = async (commentId) => {
         // Filter out the deleted comment from the comments array
-        await axios.delete(`http://localhost:8080/api/comments/${commentId}`);
+        await axios.delete(`${process.env.REACT_APP_API_URL}/api/comments/${commentId}`);
 
         const updatedComments = comments.filter((comment) => comment.id !== commentId);
         onDeleteComment(updatedComments);

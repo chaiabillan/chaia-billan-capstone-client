@@ -19,7 +19,7 @@ function PostCommentForm({ fetchComments }) {
         }
 
         try {
-            await axios.post(`${baseURL}/api/comments`,
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/comments`,
                 newCommentData)
             fetchComments();
 

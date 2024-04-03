@@ -19,7 +19,7 @@ function ReplyForm({commentId, fetchComments, onReplyPosted}) {
         }
 
         try {
-            await axios.post(`${baseURL}/api/replies`,
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/replies`,
                 newReplyData)
             fetchComments();
             onReplyPosted();

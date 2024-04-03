@@ -16,7 +16,7 @@ function Footer() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8080/api/emails', {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/emails`, {
                 email_address: email,
             });
 
