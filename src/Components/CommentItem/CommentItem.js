@@ -120,7 +120,8 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                             </button>
                             <div className='comment__actions--right--likes'>{comment.likes_count}</div>
                             <button className='comment__actions--right--reply' onClick={handleToggleReplyForm}>Reply</button>
-                            <button className='comment__actions--right--delete'onClick={handleDelete}>Delete</button> 
+                            {/* <button className='comment__actions--right--delete'onClick={handleDelete}>Delete</button> this wont be available until auth is */}
+                            <button className='comment__actions--right--delete'>Delete</button> 
                         </div>
                     </div>
 
@@ -147,7 +148,8 @@ function CommentItem({comment, onDelete, fetchComments, commentId}) {
                                         {likedReplies[reply.reply_id] ? <HeartFill className='heart-image__fill'/> : <Heart className='heart-image__outline'/>}
                                     </button>
                                     <div className='comment__actions--right--likes'>{reply.likes_count}</div>
-                                    <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button>
+                                    {/* <button className='comment__actions--right--delete' onClick={() => handleDeleteReply(reply.reply_id)}>Delete</button> this wont be available until auth is */}
+                                    <button className='comment__actions--right--delete'>Delete</button>
                                 </div>
                             </div>
                         </div>
