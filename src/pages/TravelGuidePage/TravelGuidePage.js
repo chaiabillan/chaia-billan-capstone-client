@@ -6,6 +6,7 @@ import FlightInfo from '../../Components/FlightInfo/FlightInfo'
 import RestaurantInfo from '../../Components/RestaurantInfo/RestaurantInfo'
 import CookingInfo from '../../Components/CookingInfo/CookingInfo'
 import EmergencyInfo from '../../Components/EmergencyInfo/EmergencyInfo'
+import hero2 from '../../assets/images/hero-travel-guide2.jpeg'
 
 
 function TravelGuidePage() {
