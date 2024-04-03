@@ -56,6 +56,7 @@
   &__top {
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
   }
 
   &__bottom {
@@ -73,7 +74,6 @@
     padding: 32px;
     display: flex;
     align-items: center;
-    text-align: center;
 
     &__text {
       display: flex;
