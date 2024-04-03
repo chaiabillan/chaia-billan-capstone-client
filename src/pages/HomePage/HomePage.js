@@ -2,6 +2,7 @@ import './HomePage.scss'
 import { Link } from 'react-router-dom'
 import lagos from '../../assets/images/IMG_3999.jpeg'
 import logo from '../../assets/images/Designer.svg'
+import gif from '../../assets/images/IMG_4023.gif'
 
 function HomePage () {
 
@@ -9,6 +10,8 @@ function HomePage () {
         <>
             <section className='hero' >
                 <img className='hero__image hero__image--homepage' src={lagos} alt='lagos, portugal'/>
+                {/* <img className='hero__image hero__image--homepage' src={gif} alt='lagos, portugal'/> */}
+
                 <p className='hero__title hero__title--homepage'>
                     Discover the world without limits. 
                 </p>

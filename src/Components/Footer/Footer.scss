@@ -198,6 +198,7 @@
     }
 
     @include desktop {
+        padding-left: 130px;
 
         &__label {
             font-size: 23px;
