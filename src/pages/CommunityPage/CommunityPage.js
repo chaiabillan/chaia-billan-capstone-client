@@ -9,7 +9,7 @@ function CommunityPage () {
 
     const [comments, setComments] = useState([]);
     // const baseURL = 'http://localhost:8080'
-    const baseURL = process.env.url;
+    // const baseURL = process.env.url;
 
     useEffect(() => {
         fetchComments();

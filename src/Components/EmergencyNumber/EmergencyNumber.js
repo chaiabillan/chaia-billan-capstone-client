@@ -14,7 +14,7 @@ function EmergencyNumber() {
       // Fetch countries when component mounts
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${baseURL}/api/emergency-number`); // Assuming endpoint for fetching countries is '/api/countries'
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/emergency-number`); // Assuming endpoint for fetching countries is '/api/countries'
           setCountryNames(response.data.countries);
         } catch (error) {
           console.error('Error fetching countries:', error);
@@ -27,7 +27,7 @@ function EmergencyNumber() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.get(`${baseURL}/api/emergency-number/${selectedCountry}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/emergency-number/${selectedCountry}`);
             setAmbulancePhone(response.data.ambulance_phone);
             setTimeout(() => {
                 window.scrollTo(0, document.body.scrollHeight);
