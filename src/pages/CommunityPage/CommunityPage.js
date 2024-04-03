@@ -8,7 +8,8 @@ import hero from '../../assets/images/hero-community.jpeg'
 function CommunityPage () {
 
     const [comments, setComments] = useState([]);
-    const baseURL = 'http://localhost:8080'
+    // const baseURL = 'http://localhost:8080'
+    const baseURL = process.env.url;
 
     useEffect(() => {
         fetchComments();
@@ -18,6 +19,7 @@ function CommunityPage () {
         try {
             const response = await axios.get(`${baseURL}/api/comments`)
             setComments(response.data);
+            // console.log(response.data);
         } catch (err) {
             console.log(err);
         }

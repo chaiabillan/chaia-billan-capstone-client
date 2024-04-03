@@ -6,12 +6,15 @@ function EmergencyNumber() {
     const [countryNames, setCountryNames] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState('');
     const [ambulancePhone, setAmbulancePhone] = useState('');
+
+    const baseURL = process.env.url;
+
   
     useEffect(() => {
       // Fetch countries when component mounts
       const fetchData = async () => {
         try {
-          const response = await axios.get('http://localhost:8080/api/emergency-number'); // Assuming endpoint for fetching countries is '/api/countries'
+          const response = await axios.get(`${baseURL}/api/emergency-number`); // Assuming endpoint for fetching countries is '/api/countries'
           setCountryNames(response.data.countries);
         } catch (error) {
           console.error('Error fetching countries:', error);
@@ -24,7 +27,7 @@ function EmergencyNumber() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.get(`http://localhost:8080/api/emergency-number/${selectedCountry}`);
+        const response = await axios.get(`${baseURL}/api/emergency-number/${selectedCountry}`);
             setAmbulancePhone(response.data.ambulance_phone);
             setTimeout(() => {
                 window.scrollTo(0, document.body.scrollHeight);
