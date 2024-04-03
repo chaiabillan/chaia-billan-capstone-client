@@ -35,6 +35,26 @@
             padding: 10px 0px;
             text-align: justify;
             text-justify: inter-word;
+            line-height: 21px;
+        }
+    }
+
+    @include tablet {
+
+        &__bottom {
+
+            &--about {
+                line-height: 30px;
+            }
+        }
+    }
+
+    @include desktop {
+        &__bottom {
+
+            &--about {
+                line-height: 36px;
+            }
         }
     }
 }
