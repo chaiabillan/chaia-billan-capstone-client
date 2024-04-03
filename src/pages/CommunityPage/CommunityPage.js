@@ -17,7 +17,7 @@ function CommunityPage () {
 
     const fetchComments = async () => {
         try {
-            const response = await axios.get(`${baseURL}/api/comments`)
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/comments`)
             setComments(response.data);
             // console.log(response.data);
         } catch (err) {
