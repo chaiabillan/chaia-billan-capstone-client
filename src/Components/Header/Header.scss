@@ -81,13 +81,11 @@
             display: flex;
             font-size: 14px;
             text-shadow: 1px 1px 1px grey;
-            padding-left: 2rem;
+            padding-left: 4rem;
         }
     }
 
-    &__option.navigate {
-        text-decoration: underline;
-    }
+
 
 
     &__tablet {
@@ -122,6 +120,10 @@
                 font-size: 21px;
                 margin: 0px 16px;
             }
+        }
+
+        &__option.navigate {
+            text-decoration: underline;
         }
     }
 

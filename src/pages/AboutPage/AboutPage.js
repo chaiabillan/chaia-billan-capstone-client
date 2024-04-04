@@ -27,6 +27,11 @@ import gallery25 from '../../assets/images/gallery25.jpeg'
 import gallery26 from '../../assets/images/gallery26.jpeg'
 import gallery27 from '../../assets/images/gallery27.jpeg'
 import gallery28 from '../../assets/images/gallery28.jpeg'
+import gallery29 from '../../assets/images/gallery29.jpeg'
+import gallery30 from '../../assets/images/gallery30.jpeg'
+import gallery31 from '../../assets/images/gallery31.jpeg'
+import gallery32 from '../../assets/images/gallery32.jpeg'
+import gallery33 from '../../assets/images/gallery33.jpeg'
 import { Link } from 'react-router-dom'
 
 
@@ -89,6 +94,11 @@ function AboutPage () {
                 <img className='gallery__image' src={gallery26} alt='steak'/>
                 <img className='gallery__image' src={gallery27} alt='straberries and burrata'/>
                 <img className='gallery__image' src={gallery28} alt='dessert trio'/>
+                <img className='gallery__image' src={gallery29} alt='tiramisu gelato'/>
+                <img className='gallery__image' src={gallery30} alt='picnic'/>
+                <img className='gallery__image' src={gallery31} alt='gelato'/>
+                <img className='gallery__image' src={gallery32} alt='starbucks'/>
+                <img className='gallery__image' src={gallery33} alt='chicken strips'/>
             </section>
         </>
     )
